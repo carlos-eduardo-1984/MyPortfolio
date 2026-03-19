@@ -1,466 +1,180 @@
 <!DOCTYPE html>
-<html>
-<title>CV Carlos Oliveira - Senior QA and Test Engineer </title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Carlos Oliveira – QA Automation Lead</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
 <style>
-body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
-.w3-row-padding img {margin-bottom: 12px}
-/* Set the width of the sidebar to 120px */
-.w3-sidebar {width: 120px;background: #211e29;}
-/* Add a left margin to the "page content" that matches the width of the sidebar (120px) */
-#main {margin-left: 120px}
-/* Remove margins from "page content" on small screens */
-@media only screen and (max-width: 600px) {#main {margin-left: 0}}
+ body { background:#0f0f15; color:#d9d9d9; font-family:Arial, sans-serif; }
+ h1,h2,h3 { color:#fff; }
+ .hero { padding:80px 20px; text-align:center; }
+ .section { padding:60px 0; }
+ .badge-skill { background:#1c1c25; padding:8px 14px; border-radius:6px; margin:5px; display:inline-block; }
+ .profile-img { border-radius:50%; width:160px; height:160px; object-fit:cover; border:4px solid #333; }
+ .lang-btn img { width:30px; margin-left:10px; cursor:pointer; }
 </style>
-<body class="w3-black">
+<script>
+function switchLang(lang){
+ document.querySelectorAll('[data-lang]').forEach(el => el.style.display='none');
+ document.querySelectorAll('[data-lang="'+lang+'"]').forEach(el => el.style.display='block');
+ document.documentElement.lang = lang;
+}
+</script>
+</head>
+<body onload="switchLang('en')">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+ <div class="collapse navbar-collapse" >
+   <ul >  
+ 
+   <a href="https://www.linkedin.com/in/carlosoliveira1984" class="text-white me-3"> <i class="fab fa-linkedin fa-2x"></i></a>
+   <a class="navbar-brand" href="#home"> Professional CV Carlos Oliveira</a>
+ 
+   </ul>
 
-<!-- Icon Bar (Sidebar - hidden on small screens) -->
-<nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center">
-  
-  <!-- Avatar image in top left corner -->
-  <img src="./images/eu2.png" style="width:80%">
-  <br>
-  <br>
-  <img src="./s-ctfl.png" style="height:100px;width:100px">
-  <br>
-  <br>
-  <img src="./images/eu.jpg" style="width:80%">
-  <br>  
-  <br>
-  <a href="#" class="w3-bar-item w3-button w3-padding-large w3-black">
-    <i class="fa fa-home w3-xxlarge"></i>
-    <p>MAIN</p>
-  </a>
-  
-  <a href="#about" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
-    <i class="fa fa-user w3-xxlarge"></i>
-    <p>ABOUT ME</p>
-  </a>
-  
-  <a href="#photos" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
-    <i class="fa fa-eye w3-xxlarge"></i>
-    <p>PROJECTS</p>
-  </a>
-  
-  <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
-    <i class="fa fa-envelope w3-xxlarge"></i>
-    <p>CONTACT</p>
-  </a>
+   <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item" data-lang="en"><a class="nav-link" href="#about">About Me</a></li>
+        <li class="nav-item" data-lang="en"><a class="nav-link" href="#skills">Skills</a></li>
+        <li class="nav-item" data-lang="en"><a class="nav-link" href="#portfolio">Projects</a></li>
+        <li class="nav-item" data-lang="en"><a class="nav-link" href="#contact">Contact</a></li>
 
-  <a href="https://www.linkedin.com/in/carlosoliveira1984/" class="fa fa-linkedin w3-hover-opacity" style="zoom: 300%; padding: 1px ;"></a> 
-  <br>
-  <a href="https://github.com/carlos-eduardo-1984" class="fa fa-github w3-hover-opacity" style="zoom: 300%; padding: 1px ;"></a> 
-  <br>
+        <li class="nav-item" data-lang="es"><a class="nav-link" href="#about">Sobre mí</a></li>
+        <li class="nav-item" data-lang="es"><a class="nav-link" href="#skills">Habilidades</a></li>
+        <li class="nav-item" data-lang="es"><a class="nav-link" href="#portfolio">Proyectos</a></li>
+        <li class="nav-item" data-lang="es"><a class="nav-link" href="#contact">Contacto</a></li>
+        
+
+        <li class="nav-item" data-lang="de"><a class="nav-link" href="#about">Über mich</a></li>
+        <li class="nav-item" data-lang="de"><a class="nav-link" href="#skills">Fähigkeiten</a></li>
+        <li class="nav-item" data-lang="de"><a class="nav-link" href="#portfolio">Projekte</a></li>
+        <li class="nav-item" data-lang="de"><a class="nav-link" href="#contact">Kontakt</a></li>
+        
+
+      </ul>
+    </div>
+   
+   <div class="ms-auto lang-btn">
+     <img src="./images/uk.png" onclick="switchLang('en')" alt="English">
+     <img src="./images/es.png" onclick="switchLang('es')" alt="Spanish">
+     <img src="./images/de.png" onclick="switchLang('de')" alt="German">
+   </div>
+ </div>
 </nav>
+<section class="hero" id="home">
+ <img src="./images/eu2.png" class="profile-img mb-4" />
+ <h1>Carlos Eduardo de Oliveira</h1> 
+ <p class="lead" data-lang="en">Senior QA & Automation Test Engineer • QA Automation Lead</p>
+ <p class="lead" data-lang="es">Ingeniero Senior de QA y Automatización • Líder de Automatización QA</p>
+ <p class="lead" data-lang="de">Senior QA- und Testautomationsingenieur • QA-Automatisierungsleiter</p>
+</section>
+<section class="section container" id="about">
+ <h2 data-lang="en">About Me</h2>
+ <h2 data-lang="es">Sobre Mí</h2>
+ <h2 data-lang="de">Über Mich</h2>
+ <p data-lang="en">Software Tester Specialist, Software Developer for Test Automation Engineering, polyglot (English, Spanish, Portuguese, learning German - A2, Italian - A1, French - A1). QA Engineer with 23+ years experience, 14 in IT, 8 in automation engineering, 12 in test planning & risk management, microservices testing, and QA assessments. Participated in 100+ projects and 1000+ tech product deliveries across global sectors (Medical, Banking, Automotive, Logistics, E‑commerce, Supply Chain). Strong focus on continuous improvement, SDLC, GxP, CI/CD and DevOps. Expertise with Jira, Xray, Zephyr, API testing, Postman, Talend, BDD, Cucumber, Java, Selenium, Playwright, Robot Framework, Python, JS, Cypress, Docker, Jenkins, GitHub Actions, Dynatrace, Agile & Scrum. Worked with Swiss Post, Johnson & Johnson, Volkswagen Group, Citibank, Hexagon Mining, Diebold and more.</p>
+ <p data-lang="es">Especialista en pruebas de software, desarrollador de automatización de pruebas, políglota (inglés, español, portugués, aprendiendo alemán A2, italiano A1 y francés A1). Ingeniero de QA con más de 23 años de experiencia, 14 en TI, 8 en automatización, 12 en planificación de pruebas y gestión de riesgos, pruebas de microservicios y evaluaciones QA. Participación en más de 100 proyectos y más de 1000 entregas tecnológicas en sectores globales (médico, banca, automoción, logística, comercio electrónico, cadena de suministro). Fuerte enfoque en mejora continua, SDLC, GxP, CI/CD y DevOps. Dominio de Jira, Xray, Zephyr, pruebas API, Postman, Talend, BDD, Cucumber, Java, Selenium, Playwright, Robot Framework, Python, JS, Cypress, Docker, Jenkins, GitHub Actions, Dynatrace, Agile y Scrum. Colaboración con Swiss Post, J&J, Volkswagen, Citibank, Hexagon Mining, Diebold y más.</p>
+ <p data-lang="de">Spezialist für Softwaretests, Testautomatisierungsentwickler, polyglott (Englisch, Spanisch, Portugiesisch, lernt Deutsch A2, Italienisch A1, Französisch A1). QA‑Ingenieur mit über 23 Jahren Erfahrung, davon 14 in der IT, 8 in Automatisierung, 12 in Testplanung & Risikomanagement, Microservices‑Tests und QA‑Bewertungen. Beteiligung an über 100 Projekten und über 1000 technischen Produktbereitstellungen in globalen Branchen (Medizin, Banking, Automotive, Logistik, E‑Commerce, Lieferkette). Starker Fokus auf kontinuierliche Verbesserung, SDLC, GxP, CI/CD und DevOps. Expertise in Jira, Xray, Zephyr, API‑Tests, Postman, Talend, BDD, Cucumber, Java, Selenium, Playwright, Robot Framework, Python, JS, Cypress, Docker, Jenkins, GitHub Actions, Dynatrace, Agile & Scrum. Zusammenarbeit mit Swiss Post, Johnson & Johnson, Volkswagen, Citibank, Hexagon Mining, Diebold u.a.</p>
+</section>
 
-<!-- Navbar on small screens (Hidden on medium and large screens) -->
-<div class="w3-top w3-hide-large w3-hide-medium" id="myNavbar">
-  <div class="w3-bar w3-black w3-opacity w3-hover-opacity-off w3-center w3-small">
-    <a href="#" class="w3-bar-item w3-button" style="width:25% !important">MAIN</a>
-    <a href="#about" class="w3-bar-item w3-button" style="width:25% !important">ABOUT ME</a>
-    <a href="#photos" class="w3-bar-item w3-button" style="width:25% !important">PROJECTS</a>
-    <a href="#contact" class="w3-bar-item w3-button" style="width:25% !important">CONTACTS</a>
+<section class="section bg-dark" id="skills">
+  <div class="container">
+    <h2 data-lang="en">Technical Expertise</h2>
+    <h2 data-lang="es">Experiencia técnica</h2>
+    <h2 data-lang="de">Technische Expertise</h2>
+
+     <p class="lead" data-lang="en">With my professional experience, I have developed strong mastery of technologies and practices essential for ensuring quality across software development projects, applications, and microservices. My approach is focused on delivering better outcomes through structured quality strategies, automation, and continuous improvement. Below, I list some of the technologies and methodologies in which I have gained significant expertise:</p>
+     <p class="lead" data-lang="es">Gracias a mi experiencia profesional, he adquirido un dominio sólido de las tecnologías y prácticas necesarias para garantizar la calidad en proyectos de desarrollo de software, aplicaciones y microservicios. Mi enfoque se centra en obtener mejores resultados mediante estrategias de calidad bien estructuradas, automatización y mejora continua. A continuación, destaco algunas de las tecnologías y metodologías en las que he desarrollado un alto nivel de experiencia:</p>
+     <p class="lead" data-lang="de">Durch meine berufliche Erfahrung habe ich umfassende Kenntnisse in den Technologien und Methoden entwickelt, die für die Sicherstellung der Qualität in Softwareentwicklungsprojekten, Anwendungen und Microservices entscheidend sind. Mein Fokus liegt darauf, durch strukturierte Qualitätsstrategien, Automatisierung und kontinuierliche Optimierung bessere Ergebnisse zu erzielen. Nachfolgend liste ich einige der Technologien und Vorgehensweisen auf, in denen ich vertiefte Expertise aufgebaut habe:</p>
+
+    <div>
+      <span class="badge-skill">WebApps Testing</span>
+      <span class="badge-skill">Selenium</span>      
+      <span class="badge-skill">Robot Framework</span>
+      <span class="badge-skill">Playwright</span>
+      <span class="badge-skill">Jira Xray</span>
+      <span class="badge-skill">Jira Zephyr</span>
+      <span class="badge-skill">Azure DevOps</span>
+      <span class="badge-skill">Java</span>
+      <span class="badge-skill">JavaScript</span>
+      <span class="badge-skill">Python</span>
+      <span class="badge-skill">intelliJ</span>
+      <span class="badge-skill">PyCharm</span>
+      <span class="badge-skill">VSCode</span>
+      <span class="badge-skill">AndroidStudio</span>
+      <span class="badge-skill">Figma</span>
+      <span class="badge-skill">C#</span>
+      <span class="badge-skill">GitHub Actions</span>
+      <span class="badge-skill">Jenkins</span>
+      <span class="badge-skill">Docker</span>
+      <span class="badge-skill">BDD</span>
+      <span class="badge-skill">Cypress</span>
+      <span class="badge-skill">API Testing</span>
+      <span class="badge-skill">Postman</span>
+      <span class="badge-skill">Talend</span>
+    </div>
   </div>
-</div>
+</section>
 
-<!-- Page Content -->
-<div class="w3-padding-large" id="main">
-  <!-- Header/Home -->
-  <header class="w3-container w3-padding-32 w3-center w3-black" id="home">
-    <h1 class="w3-jumbo"><span class="w3-hide-small">Carlos Eduardo </span> de Oliveira</h1>
-    <p>SENIOR SOFTWARE TEST ENGINEER - S.Q.A.</p>
-    
-  </header>
+<section class="section container" id="portfolio">
 
-  <!-- About Section -->
-  <div class="w3-content w3-justify w3-text-grey w3-padding-8" id="about">
-    <h2 class="w3-text-light-grey">ABOUT ME</h2>
-    <hr style="width:200px" class="w3-opacity">
-    <p> Senior Software Tester and Automation Engineer, polyglot (English, Spanish, Portuguese, currently learning German – A2, Italian – A1, and French – A1). I am a QA Engineer with over 23 years of experience in quality (since 2003), including 14 years in IT software projects (since 2012) and 6 years dedicated to test automation engineering and management (since 2020).</p>
-    <p> My background includes test planning, risk management, microservices integration assessments, and participation in 100+ technology projects and solution go‑lives, contributing across interregional and global environments. </p>
-    <p> I have collaborated with companies in a wide range web solutions and Microservices accross any sectors, such as: </p>
-    <p>-Medical, Finance, Banking, 
-    <br>-Automabilistics, BI, Factories,  
-    <br>-Logistics, Posts, e-commerce, 
-    <br>-Enterprises tools, and Supply Chain. 
-    <h2 class="w3-text-light-grey">Technical Expertise</h2>
-    <p>Expert about QA for Web Solutions and Microservices: </p>
-    <p> Here some tool domains: JIRA, Xray, Zephyr, HP ALM, Azure DevOps, API Testing, Postman, Talend, BDD, Gherkin, Cucumber, Java, Selenium, Playwright, Robot Framework, Python, JavaScript, Cypress, Docker, Jenkins, GitHub Actions, Dynatrace, Agile and Scrum methodologies. </p> 
-    <h2 class="w3-text-light-grey">Professional Values</h2>
-    <p> Integrity, resilience, and continuous improvement are key principles that guide my career and the way I drive quality in every project. </p>     
-    <h2 class="w3-text-light-grey">Industry Experience</h2>
-    <p> I have had the privilege to work as a trusted partner for major companies, including: </p>     
-    <b> Swiss Post, Johnson & Johnson, Volkswagen Group, Citibank, Hexagon Mining, Diebold, among others. </b>  
-    <br>
-    <h3 class="w3-padding-16 w3-text-light-grey">My journey and skill numbers</h3>
-    <p class="w3-wide">Projects with my collaboration </p>
-    <div class="w3-white">
-      <div class="w3-dark-grey" style="height:28px;width:95%">+1000</div>
-    </div>
-    <p class="w3-wide">Skills (Certifications, courses, and technicals lessons learned)</p>
-    <div class="w3-white">
-      <div class="w3-dark-grey" style="height:28px;width:50%">+500</div>      
-    </div>
-  
-  <p class="w3-wide">Professional Experience </p>
-  <div class="w3-white">
-    <div class="w3-dark-grey" style="height:28px;width:98%">+23 years on QA area and 14 on agile and IT projects</div>
-  </div>
-    <p class="w3-wide">My Education </p>
-    <div class="w3-white">
-      <div class="w3-dark-grey" style="height:28px;width:95%">2 Post Graduations + 2 Bachelor graduations + 2 Tech graduation + 500 courses on IT</div>
-    </div>
+    <h2 data-lang="en">Projects & Portfolio</h2>
+    <h2 data-lang="es">Proyectos & Portafolio</h2>
+    <h2 data-lang="de">Projekte & Portfolio</h2>
 
-    <div >
-      <div>    
-        <br>
-<table class="w3-padding-16 w3-panel w3-white" border="1">
-  <thead>
-    <tr>
-      <th>My skills</th>
-      <th>Level*</th>
-      <th>Years of Experience</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>SQA and Tester Engineering</td>
-      <td>Expert</td>
-      <td>23</td>
-    </tr>
-    <tr>
-      <td>Agile / Scrum Methodologies</td>
-      <td>Expert</td>
-      <td>12</td>
-    </tr>
-    <tr>
-      <td>Jira / Confluence – Project Management</td>
-      <td>Expert</td>
-      <td>7</td>
-    </tr>
-    <tr>
-      <td>Xray &amp; Zephyr Test Management &amp; Execution Tools (Jira Test Plugin)</td>
-      <td>Expert</td>
-      <td>12</td>
-    </tr>
-    <tr>
-      <td>Excel &amp; MS Power BI – for QA Business Analysis for Project Metrics</td>
-      <td>Expert</td>
-      <td>10</td>
-    </tr>
-    <tr>
-      <td>Test Automations with Selenium with Java</td>
-      <td>Senior</td>
-      <td>6</td>
-    </tr>
-    <tr>
-      <td>GitHub Actions and Jenkins for Test automation</td>
-      <td>Senior</td>
-      <td>7</td>
-    </tr>
-    <tr>
-      <td>Test Automations with Java, Selenium, and Maven</td>
-      <td>Senior</td>
-      <td>6</td>
-    </tr>
-    <tr>
-      <td>Test Automations with Robot framework, Playwright</td>
-      <td>Senior</td>
-      <td>4</td>
-    </tr>
-    <tr>
-      <td>Automation Tests with Cypress, APIs, and GUI web solutions</td>
-      <td>Advanced</td>
-      <td>3</td>
-    </tr>
-    <tr>
-      <td>Automation Tests with Jest</td>
-      <td>Advanced</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <td>API Tests with Postman</td>
-      <td>Expert</td>
-      <td>5</td>
-    </tr>
-    <tr>
-      <td>API Tests with Talend</td>
-      <td>Advanced</td>
-      <td>3</td>
-    </tr>
-    <tr>
-      <td>Jmeter for performance checks</td>
-      <td>Medium</td>
-      <td>1</td>
-    </tr>
-  </tbody>
-</table>
-    <p class="w3-wide"> * More then 500 specialization trainings. </p>
-    <br>
-  </div><br>
-     </div>
-       </div>
-   <br>
-    <div class="w3-row w3-center w3-padding-16 w3-section w3-light-grey">
-         <style>
-  details {
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    padding: 10px;
-    border-radius: 6px;
-    background: #f9f9f9;
-  }
+    <p class="lead" data-lang="en">Below are some of the technologies and tools used across my QA automation portfolio :</p>
+    <p class="lead" data-lang="es">A continuación se presentan algunos ejemplos de las tecnologías y herramientas utilizadas a lo largo de mi portafolio :</p>
+    <p class="lead" data-lang="de">Nachfolgend finden Sie einige Beispiele der Technologien und Werkzeuge, die ich in meinem QA‑Automatisierungsportfolio :</p>
 
-  summary {
-    font-weight: bold;
-    cursor: pointer;
-    font-size: 15px;
-  }
-
-  ul {
-    margin-top: 8px;
-    margin-bottom: 0;
-  }
-</style>
-
-<h3>My expectations for new challenges</h3>
-<p><strong> Sallary: €60 – €70k Y (gross yearly)</strong></p>
-
-<details>
-  <summary>Expectations about standard benefits: </summary>
-  <ul>
-    <li>Health and Lifwe Insurance</li>
-    <li>Paid Vacation, Holidays and Sick Leave Days</li>
-    <li>Annual Bonus / Performance Bonus</li>
-    <li>Meal Allowance / Meal Card</li>
-    <li>Pension Plan / Retirement Plan</li>
-    <li>Work-from-Home Allowance</li>
-  </ul>
-</details>
-
-<details>
-  <summary>Expectations about Work Model & Flexibility</summary>
-  <ul>
-    <li>Hybrid Work Model</li>
-    <li>Remote Work Options</li>
-    <li>Flexible Working Hours</li>
-    <li>Flexible Time Off Policies</li>
-  </ul>
-</details>
-
-<details>
-  <summary>Expectations about Professional Development</summary>
-  <ul>
-    <li>Training & Certification Budget</li>
-    <li>Conference Allowance</li>
-    <li>Career Development Programs</li>
-    <li>Access to Learning Platforms</li>
-  </ul>
-</details>
-
-<details>
-  <summary>Expectations about Well‑Being & Lifestyle</summary>
-  <ul>
-    <li>Health & Wellness Programs</li>
-    <li>Mental Health Support</li>
-    <li>Gym Membership or Fitness Allowance</li>
-    <li>Ergonomic Equipment Support</li>
-    <li>Well-being Days Off</li>
-  </ul>
-</details>
-
-<details>
-  <summary>Expectations about Additional Perks</summary>
-  <ul>
-    <li>Relocation Package</li>
-    <li>Company Laptop & Equipment</li>
-    <li>Mobile Phone Allowance</li>
-    <li>Internet Reimbursement</li>
-    <li>Team-building Events</li>
-    <li>Company Discounts</li>
-    <li>Childcare Support</li>
-  </ul>
-</details>     
-    </div>
-
-    <button onclick="location.href='./CV_Carlos Oliveira -2026.pdf'" class="w3-button w3-light-grey w3-padding-large w3-section">
-      <i class="fa fa-download"></i> Download CV for your assessments !!! 
-    </button>
-    
-
-    <!-- Grid for pricing tables -->
-    <h3 class="w3-padding-16 w3-text-light-grey" id="photos">A bit of my teach Portfolio (Link @ imagens)</h3>
-    <div class="w3-row-padding" style="margin:0 -16px">
-      <div class="w3-half w3-margin-bottom">
-        <ul class="w3-ul w3-white w3-center w3-opacity w3-hover-opacity-off">
-          <li class="w3-dark-grey w3-xlarge w3-padding-32">Functional Software tests and QA tools</li>
-          <li class="w3-padding-16"> Requirements and use case analysis for the creation of Manual Test Plans and Scripts, <br>
-             Test execution, creation, documentation, and defect management. 
-            <br> <b>Project Unit 1 </b><br>
-            <a href="https://github.com/carloseduardo1984/JIRA_Confluence">
-              <img src="./images/jira.png" style="height:50px;width:120px">
-            </a>
-          
-            <a href="https://github.com/carloseduardo1984/JIRA_Confluence">
-              <img src="./images/confluence.png" style="height:50px;width:200px">
-            </a>
-          </li>
-
-          <li class="w3-padding-16"> Quality Analysis in Projects 
-            <br>com HTML, CSS + JavaScript + NodeJS + Git and GiHub Actions
-            <br> <b>Project Unit 2 </b> <br> 
-            <a href="https://github.com/carloseduardo1984/JIRA_Confluence">
-              <img src="./images/vscode.png" style="height:50px;width:40px">
-            </a>
-            <a href="https://github.com/carloseduardo1984/m2w2">          
-              <img src="./images/html css jss.png" style="height:38px;width:100px">  </a> 
-            <a href="https://github.com/carloseduardo1984/APIRestful_NodeJs">         
-            <img src="./images/nodejs.png" style="height:38px;width:80px">  </a> 
-            <a href="https://github.com/carloseduardo1984/JIRA_Confluence">
-              <img src="./images/git.png" style="height:38px;width:80px"> </a>
-              <a href="https://github.com/carloseduardo1984/JIRA_Confluence">
-                <img src="./images/GitHub.png" style="height:38px;width:80px"> </a>
-          </li>
-
-         <li class="w3-padding-16">Projects for unit testing 
-          <br> NodeJS + Jest + CICD with GitHub Actions  
-          <br> <b>Project Unit 3 </b> <br>
-          <a href="https://github.com/carloseduardo1984/teste-unitario-jest">
-            <img src="./images/nodejs.png" style="height:50px;width:100px"> </a>
-            <a href="https://github.com/carloseduardo1984/teste-unitario-jest">
-            <img src="./images/jest.png" style="height:50px;width:150px"> </a>
-            <a href="https://github.com/carloseduardo1984/api_with_github_actions">
-            <img src="./images/github actions.png" style="height:50px;width:120px"> </a>
-            <a href="https://github.com/carloseduardo1984/api_with_github_actions">
-              <img src="./images/CICD (V4).png" style="height:100px;width:200px"> </a>
-          </li>
-
-          <li class="w3-padding-16">Projects with CICD - QA improvements 
-          <br> CICD with GitHub Actions  
-          <br> <b>Project Unit 4 </b> <br>    
-          <a href="https://github.com/carloseduardo1984/api_with_github_actions">
-          <img src="./images/github actions.png" style="height:50px;width:120px"> </a>
-           <a href="https://github.com/carloseduardo1984/api_with_github_actions">
-           <img src="./images/CICD (V4).png" style="height:100px;width:200px"> </a>
-          </li>
-                   
-          </li>
-          <li class="w3-light-grey w3-padding-24">
-            <button class="w3-button w3-white w3-padding-large w3-hover-black" href="https://github.com/carlos-eduardo-1984">Saiba mais...</button>
-          </li>
-        </ul>
+    <div class="row mt-4">
+      <div class="col-md-4 text-center">
+        <h4>Jira / Confluence</h4>
+        <a href="https://github.com/carloseduardo1984" class="text-white">Link: <i class="fab fa-github fa-2x"></i></a>
+        <img src="./images/jira.png" class="icon-img" />
+        <img src="./images/confluence.png" class="icon-img" />
       </div>
 
-      <div class="w3-half">
-        <ul class="w3-ul w3-white w3-center w3-opacity w3-hover-opacity-off">
-          <li class="w3-dark-grey w3-xlarge w3-padding-32">Projects for Automated and Exploratory Testing</li>
-                           
-          </li>
-          <li class="w3-padding-16">Integration Testing for Microservices and Databases | APIs 
-            <br> Postman + Newman + SQL + GitHub Actions (Docker)
-            <br> <b>Project unit 4 </b> <br>
-            
-            <a href="https://github.com/carloseduardo1984/api_with_github_actions">
-            <img src="./images/postman.png" style="height:50px;width:150px"> </a>
-            <a href="./Conteudo de sql.txt">
-              <img src="./images/mysql.png" style="height:40px;width:50px"> </a>
-            <a href="./Conteudo de sql.txt">
-                <img src="./images/github actions.png" style="height:50px;width:100px"> </a>
-
-          </li>
-          <li class="w3-padding-16"> E2E Test Automations
-            <br> BDD (Cucumber) + Cypress + Selenium + GitHub Actions
-            <br> <b>Project Unit 5 </b> <br>
-            <a href="https://github.com/carloseduardo1984/Cypress_bdd_actions_v10">
-            <img src="./images/bdd.png" style="height:50px;width:90px"> </a>
-            <a href="https://github.com/carloseduardo1984/cicd_dev_int_system_Tests">
-            <img src="./images/cypress.png" style="height:50px;width:160px"> </a>
-            <a href="https://github.com/carloseduardo1984/Selenium_bdd_actions">
-            <img src="./images/selenium.png" style="height:50px;width:100px"> </a>
-            <a href="https://github.com/carloseduardo1984/cicd_simple_actions_pipeline">
-            <img src="./images/github actions.png" style="height:50px;width:120px"> </a>
-          </li>
-
-          <li class="w3-padding-16"> Functional and Integration Test Automations
-            <br> KeyDriven with Python + Robot Framework + Selenium + GitHub Actions
-            <br> <b>Project Unit 6 </b> <br>
-            <a href="https://github.com/carlos-eduardo-1984/Robot-Docker/">
-            <img src="./images/robot-framework-logo.png" style="height:50px;width:90px"> </a>
-            <a href="https://github.com/carlos-eduardo-1984/Robot-Docker">
-            <img src="./images/selenium.png" style="height:50px;width:100px"> </a>
-            <a href="https://github.com/carloseduardo1984/cicd_simple_actions_pipeline">
-            <img src="./images/github actions.png" style="height:50px;width:120px"> </a>
-          </li>
-
-          <li class="w3-padding-16">Exploratory Testing for Mobile Devices 
-            <br> Emulators + Peripheral Analysis + Screen Responsiveness and Adaptability
-            <br> <b>Project Unit 7 </b> <br>
-            <a href="https://developer.android.com/studio/test?hl=pt-br">
-            <img src="./images/mob.png" style="height:100px;width:140px"> </a>
-            <a href="https://developer.android.com/studio/test/test-in-android-studio?hl=pt-br">
-              <img src="./images/mobile emulators header.png" style="height:100px;width:160px"> </a>
-              <a href="https://www.emizentech.com/blog/emulator-vs-simulator-for-mobile-testing.html">
-                <img src="./images/Emulator-vs-Simulator.jpg" style="height:100px;width:180px"> </a>
-          
-          </li>
-                  
-          </li>
-          <li class="w3-light-grey w3-padding-24">
-            <button class="w3-button w3-white w3-padding-large w3-hover-black" href="https://github.com/carlos-eduardo-1984">Learn more...</button>
-          </li>
-        </ul>
+      <div class="col-md-4 text-center">
+        <h4>Automation: Cypress / Selenium / BDD</h4>
+        <a href="https://github.com/carloseduardo1984" class="text-white">Link: <i class="fab fa-github fa-2x"></i></a>
+        <img src="./images/cypress.png" class="icon-img" />
+        <img src="./images/selenium.png" class="icon-img" />
+        <img src="./images/bdd.png" class="icon-img" />
       </div>
 
+      <div class="col-md-4 text-center">
+        <h4>API Testing</h4>
+        <a href="https://github.com/carloseduardo1984" class="text-white">Link: <i class="fab fa-github fa-2x"></i></a>
+        <img src="./images/postman.png" class="icon-img" />
+        <img src="./images/mysql.png" class="icon-img" />
+      </div>
       
-    <!-- End Grid/Pricing tables -->
     </div>
+</section>
+
+<section class="section container" id="contact">
+    <h2 data-lang="en">Contact Me</h2>
+    <h2 data-lang="es">Contacto</h2>
+    <h2 data-lang="de">Kontakt</h2>
+
+    <p class="lead" data-lang="en"><i class="fa fa-map-marker me-2"></i>Lisbon, PT</p>
+    <p class="lead" data-lang="es"><i class="fa fa-map-marker me-2"></i>Lisboa, PT</p>
+    <p class="lead" data-lang="de"><i class="fa fa-map-marker me-2"></i>Lissabon, PT</p>
+
+
+    <p><i class="fa fa-phone me-2"></i>LinkedIn: linkedin.com/in/carlosoliveira1984</p>
+    <p><i class="fa fa-envelope me-2"></i>Email: carloseduardo1984@gmail.com</p>
+    <a href="./CV_Carlos Oliveira -2026.pdf" class="btn btn-warning btn-lg mt-3"><i class="fa fa-download"></i> Download CV </a>
+</section>
+
+<footer>
+    <a href="https://www.linkedin.com/in/carlosoliveira1984" class="text-white me-3"><i class="fab fa-linkedin fa-2x"></i></a>
+    <a href="https://github.com/carloseduardo1984" class="text-white"><i class="fab fa-github fa-2x"></i></a>
     
-    
-    
-  <!-- End About Section -->
-  </div>
-  
+</footer>
 
-
-
-    <!-- End photo grid -->
-    </div>
-  <!-- End Portfolio Section -->
-  </div>
-
-  <!-- Contact Section -->
-  <div class="w3-padding-64 w3-content w3-text-grey" id="contact">
-    <h2 class="w3-text-light-grey">Contact Me</h2>
-    <hr style="width:200px" class="w3-opacity">
-
-    <div class="w3-section">
-      <p><i class="fa fa-map-marker fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> Lisbon, PT</p>
-      <p><i class="fa fa-phone fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> Linkedin: https://www.linkedin.com/in/carlosoliveira1984/ </p>
-      <p><i class="fa fa-envelope fa-fw w3-text-white w3-xxlarge w3-margin-right"> </i> Email: carloseduardo1984@gmail.com</p>
-    </div><br>
-    
-
-  <!-- End Contact Section -->
-  </div>
-  
-    <!-- Footer COLOQUE O LINK DE SUAS MIDIAS-->
-  <footer class="w3-content w3-padding-32 w3-text-grey w3-xlarge">
-    <!-- <a href="https://www.facebook.com" class="fa fa-facebook-official w3-hover-opacity"></a> 
-    <a href="https://www.instagram.com" class="fa fa-instagram w3-hover-opacity"></a>  -->
-    <h2>
-    <a href="https://www.linkedin.com/in/carlosoliveira1984/" class="fa fa-linkedin w3-hover-opacity" ></a> 
-    <a href="https://github.com/carloseduardo1984" class="fa fa-github w3-hover-opacity"></a> 
-    </h2>
-    
-  <!-- End footer -->
-  </footer>
-
-<!-- END PAGE CONTENT -->
-</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 </html>
