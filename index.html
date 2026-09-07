@@ -1,713 +1,108 @@
-
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Carlos Oliveira, Senior Software QA Automation Engineer, Quality Engineering Leader and Test Strategy Specialist.">
-  <meta name="theme-color" content="#0b1120">
-  <title>Carlos Oliveira | Senior QA Automation Engineer</title>
-
-  <link rel="preconnect" href="https://cdn.jsdelivr.net">
-  <link rel="preconnect" href="https://cdnjs.cloudflare.com">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
-
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Carlos Oliveira, Senior Quality Engineering Leader, QA Manager and Test Automation Architect. Portfolio featuring QA strategy, automation, CI/CD, API, Kafka, SAP and AI-assisted testing.">
+  <meta name="keywords" content="Carlos Oliveira, QA Manager, Quality Engineering, Test Strategy, Test Automation, Robot Framework, Playwright, Selenium, Cypress, API Testing, Kafka, ISTQB CTFL, CTAL-TM, Scrum Master">
+  <meta name="author" content="Carlos Oliveira">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <meta name="theme-color" content="#080d18">
+  <meta property="og:type" content="profile">
+  <meta property="og:title" content="Carlos Oliveira | Quality Engineering Leader">
+  <meta property="og:description" content="QA leadership, test strategy, automation architecture and AI-assisted quality engineering.">
+  <meta property="og:image" content="./images/eu2.png">
+  <title>Carlos Oliveira | Quality Engineering Leader</title>
+  <link rel="canonical" href="https://carloseduardo1984.github.io/Meu_portfolio/">
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Person",
+    "name":"Carlos Oliveira",
+    "jobTitle":"Senior Software Quality Test Automation Engineer",
+    "description":"QA Manager, Test Strategy Specialist and Test Automation Architect.",
+    "image":"./images/eu2.png",
+    "email":"mailto:carloseduardo1984@gmail.com",
+    "url":"https://carloseduardo1984.github.io/Meu_portfolio/",
+    "sameAs":["https://www.linkedin.com/in/carlosoliveira1984/?locale=es-ES","https://github.com/carloseduardo1984"],
+    "address":{"@type":"PostalAddress","addressLocality":"Valencia","addressCountry":"ES"},
+    "knowsLanguage":["Portuguese","English","Spanish","German","Italian","French"],
+    "knowsAbout":["Quality Engineering","QA Management","Test Strategy","Test Automation","Robot Framework","Playwright","Selenium","Cypress","API Testing","Kafka Testing","SAP Testing","CI/CD","Performance Testing","AI-Assisted Testing"],
+    "hasCredential":[
+      {"@type":"EducationalOccupationalCredential","credentialCategory":"Certification","name":"ISTQB Certified Tester Foundation Level (CTFL)"},
+      {"@type":"EducationalOccupationalCredential","credentialCategory":"Certification","name":"ISTQB Agile Tester Extension"},
+      {"@type":"EducationalOccupationalCredential","credentialCategory":"Certification","name":"ISTQB Certified Tester Advanced Level - Test Management v3.0 (CTAL-TM)"},
+      {"@type":"EducationalOccupationalCredential","credentialCategory":"Certification","name":"Scrum Master"}
+    ]
+  }
+  </script>
   <style>
-    :root {
-      --bg: #080d18;
-      --surface: #101827;
-      --surface-2: #172033;
-      --surface-3: #1e293b;
-      --text: #e5edf8;
-      --muted: #9aa9bd;
-      --primary: #35d0a0;
-      --primary-dark: #1ea77c;
-      --secondary: #60a5fa;
-      --border: rgba(148, 163, 184, .18);
-      --sidebar-width: 300px;
-      --radius: 18px;
-      --shadow: 0 18px 50px rgba(0, 0, 0, .25);
-    }
-
-    * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; scroll-padding-top: 24px; }
-
-    body {
-      margin: 0;
-      overflow-x: hidden;
-      background:
-        radial-gradient(circle at 80% 5%, rgba(96,165,250,.12), transparent 30%),
-        radial-gradient(circle at 48% 45%, rgba(53,208,160,.06), transparent 35%),
-        var(--bg);
-      color: var(--text);
-      font-family: Inter, "Segoe UI", Arial, sans-serif;
-      line-height: 1.7;
-    }
-
-    body.menu-open { overflow: hidden; }
-    a { color: inherit; }
-    img { max-width: 100%; }
-
-    .skip-link {
-      position: fixed;
-      top: -100px;
-      left: 1rem;
-      z-index: 3000;
-      padding: .75rem 1rem;
-      color: #05120e;
-      background: var(--primary);
-      border-radius: 8px;
-      font-weight: 700;
-    }
-    .skip-link:focus { top: 1rem; }
-
-    .sidebar {
-      position: fixed;
-      inset: 0 auto 0 0;
-      z-index: 1050;
-      width: var(--sidebar-width);
-      padding: 27px 25px;
-      overflow-y: auto;
-      background: rgba(16, 24, 39, .97);
-      border-right: 1px solid var(--border);
-      backdrop-filter: blur(16px);
-      transition: transform .3s ease;
-    }
-
-    .profile { text-align: center; }
-    .profile-img {
-      width: 128px;
-      height: 128px;
-      object-fit: cover;
-      border: 4px solid var(--primary);
-      border-radius: 50%;
-      box-shadow: 0 0 0 8px rgba(53, 208, 160, .08);
-    }
-    .profile h1 { margin: 18px 0 3px; font-size: 1.36rem; font-weight: 800; }
-    .profile-role { margin: 0; color: var(--primary); font-size: .94rem; font-weight: 700; }
-    .profile-location { margin: 5px 0 0; color: var(--muted); font-size: .84rem; }
-
-    .availability {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      margin-top: 13px;
-      padding: 6px 12px;
-      color: #a7f3d0;
-      background: rgba(16,185,129,.11);
-      border: 1px solid rgba(52,211,153,.2);
-      border-radius: 999px;
-      font-size: .78rem;
-    }
-    .availability::before {
-      width: 8px;
-      height: 8px;
-      content: "";
-      background: #34d399;
-      border-radius: 50%;
-      box-shadow: 0 0 10px #34d399;
-    }
-
-    .socials { display: flex; justify-content: center; gap: 10px; margin: 18px 0; }
-    .socials a,
-    .mobile-menu-button {
-      display: grid;
-      width: 42px;
-      height: 42px;
-      place-items: center;
-      color: var(--text);
-      background: var(--surface-2);
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      text-decoration: none;
-      transition: .2s ease;
-    }
-    .socials a:hover { color: #06130f; background: var(--primary); transform: translateY(-2px); }
-
-    .side-nav { margin-top: 18px; }
-    .side-nav a {
-      display: flex;
-      align-items: center;
-      gap: 13px;
-      margin: 4px 0;
-      padding: 10px 13px;
-      color: var(--muted);
-      border-radius: 11px;
-      text-decoration: none;
-      transition: .2s ease;
-    }
-    .side-nav a i { width: 20px; text-align: center; }
-    .side-nav a:hover,
-    .side-nav a.active { color: #07130f; background: var(--primary); font-weight: 700; }
-
-    .language-switcher {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 7px;
-      margin-top: 20px;
-      padding-top: 20px;
-      border-top: 1px solid var(--border);
-    }
-    .lang-button {
-      padding: 8px 4px;
-      color: var(--muted);
-      background: transparent;
-      border: 1px solid var(--border);
-      border-radius: 9px;
-      font-size: .76rem;
-      font-weight: 700;
-      transition: .2s ease;
-    }
-    .lang-button:hover,
-    .lang-button.active { color: #07130f; background: var(--primary); border-color: var(--primary); }
-
-    .download-button {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 9px;
-      margin-top: 14px;
-      padding: 11px;
-      color: #07130f;
-      background: var(--primary);
-      border-radius: 11px;
-      font-weight: 800;
-      text-decoration: none;
-    }
-    .download-button:hover { color: #07130f; background: #63e6bf; }
-
-    .mobile-header {
-      display: none;
-      position: fixed;
-      inset: 0 0 auto 0;
-      z-index: 1100;
-      align-items: center;
-      justify-content: space-between;
-      height: 68px;
-      padding: 0 18px;
-      background: rgba(8,13,24,.94);
-      border-bottom: 1px solid var(--border);
-      backdrop-filter: blur(14px);
-    }
-    .mobile-brand { font-weight: 800; }
-    .mobile-menu-button { cursor: pointer; }
-
-    .sidebar-overlay {
-      display: none;
-      position: fixed;
-      inset: 0;
-      z-index: 1040;
-      background: rgba(0,0,0,.64);
-    }
-
-    main { margin-left: var(--sidebar-width); }
-    section { position: relative; padding: 90px clamp(25px, 6vw, 90px); }
-    .content-wrap { width: min(1180px, 100%); margin-inline: auto; }
-
-    .hero {
-      display: flex;
-      min-height: 100vh;
-      align-items: center;
-    }
-    .eyebrow {
-      display: inline-flex;
-      align-items: center;
-      gap: 9px;
-      margin-bottom: 18px;
-      color: var(--primary);
-      font-weight: 800;
-      letter-spacing: .08em;
-      text-transform: uppercase;
-    }
-    .hero h2 {
-      max-width: 920px;
-      margin: 0;
-      font-size: clamp(2.6rem, 6vw, 5.8rem);
-      font-weight: 900;
-      line-height: .99;
-      letter-spacing: -.055em;
-    }
-    .gradient-text {
-      color: transparent;
-      background: linear-gradient(100deg, var(--primary), #7dd3fc 82%);
-      background-clip: text;
-      -webkit-background-clip: text;
-    }
-    .hero-description { max-width: 780px; margin: 28px 0; color: var(--muted); font-size: 1.12rem; }
-    .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; }
-    .button-primary,
-    .button-secondary {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      padding: 13px 19px;
-      border-radius: 12px;
-      font-weight: 800;
-      text-decoration: none;
-      transition: .2s ease;
-    }
-    .button-primary { color: #07130f; background: var(--primary); }
-    .button-secondary { color: var(--text); background: var(--surface-2); border: 1px solid var(--border); }
-    .button-primary:hover,
-    .button-secondary:hover { transform: translateY(-2px); }
-
-    .kpi-grid {
-      display: grid;
-      grid-template-columns: repeat(4, minmax(0,1fr));
-      gap: 14px;
-      margin-top: 55px;
-    }
-    .kpi-card,
-    .content-card,
-    .project-card,
-    .skill-group,
-    .education-card {
-      background: linear-gradient(145deg, rgba(23,32,51,.92), rgba(16,24,39,.92));
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-    }
-    .kpi-card { padding: 21px; }
-    .kpi-card strong { display: block; color: var(--primary); font-size: 2rem; line-height: 1; }
-    .kpi-card span { display: block; margin-top: 9px; color: var(--muted); font-size: .87rem; }
-
-    .section-heading { margin-bottom: 38px; }
-    .section-heading span { color: var(--primary); font-weight: 800; text-transform: uppercase; letter-spacing: .08em; }
-    .section-heading h2 { margin: 7px 0 0; font-size: clamp(2rem, 4vw, 3rem); font-weight: 900; }
-    .section-heading p { max-width: 760px; margin: 12px 0 0; color: var(--muted); }
-
-    .about-grid { display: grid; grid-template-columns: 1.45fr .75fr; gap: 20px; }
-    .content-card { padding: 28px; }
-    .content-card p { margin: 0; color: var(--muted); }
-    .focus-list { display: grid; gap: 12px; margin: 0; padding: 0; list-style: none; }
-    .focus-list li { display: flex; gap: 10px; align-items: flex-start; }
-    .focus-list i { margin-top: 6px; color: var(--primary); }
-
-    .timeline { position: relative; margin-left: 10px; padding-left: 35px; }
-    .timeline::before { position: absolute; top: 5px; bottom: 5px; left: 6px; width: 2px; content: ""; background: linear-gradient(var(--primary), rgba(96,165,250,.25)); }
-    .timeline-item { position: relative; margin-bottom: 23px; padding: 24px; background: rgba(23,32,51,.72); border: 1px solid var(--border); border-radius: 15px; }
-    .timeline-item::before { position: absolute; top: 26px; left: -36px; width: 15px; height: 15px; content: ""; background: var(--primary); border: 4px solid var(--bg); border-radius: 50%; box-shadow: 0 0 0 3px rgba(53,208,160,.18); }
-    .timeline-item h3 { margin: 0; font-size: 1.13rem; }
-    .timeline-item .company { color: var(--primary); font-weight: 800; }
-    .timeline-item p { margin: 9px 0 0; color: var(--muted); }
-
-    .skills-grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 18px; }
-    .skill-group { padding: 24px; }
-    .skill-group h3 { margin: 0 0 16px; font-size: 1.05rem; }
-    .skill-tags { display: flex; flex-wrap: wrap; gap: 8px; }
-    .skill-tag { padding: 7px 10px; color: #cbd8e7; background: rgba(96,165,250,.08); border: 1px solid rgba(96,165,250,.14); border-radius: 999px; font-size: .82rem; }
-
-    .project-filters { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 23px; }
-    .filter-button { padding: 8px 14px; color: var(--muted); background: var(--surface-2); border: 1px solid var(--border); border-radius: 999px; font-weight: 700; }
-    .filter-button.active,
-    .filter-button:hover { color: #07130f; background: var(--primary); border-color: var(--primary); }
-    .projects-grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 18px; }
-    .project-card { display: flex; min-height: 285px; flex-direction: column; padding: 24px; transition: .25s ease; }
-    .project-card:hover { transform: translateY(-6px); border-color: rgba(53,208,160,.46); }
-    .project-icon { display: grid; width: 48px; height: 48px; margin-bottom: 18px; place-items: center; color: var(--primary); background: rgba(53,208,160,.1); border-radius: 13px; font-size: 1.2rem; }
-    .project-card h3 { font-size: 1.12rem; }
-    .project-card p { color: var(--muted); font-size: .94rem; }
-    .project-tools { margin-bottom: 18px; color: var(--secondary); font-size: .8rem; font-weight: 700; }
-    .project-link { display: inline-flex; align-items: center; gap: 8px; margin-top: auto; color: var(--primary); font-weight: 800; text-decoration: none; }
-    .project-card.hidden { display: none; }
-
-    .cert-grid,
-    .education-grid { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 18px; }
-    .education-card { padding: 24px; }
-    .education-card small { color: var(--primary); font-weight: 800; }
-    .education-card h3 { margin: 8px 0; font-size: 1.08rem; }
-    .education-card p { margin: 0; color: var(--muted); }
-
-    .language-list { display: grid; gap: 19px; }
-    .language-row { display: grid; grid-template-columns: 150px 1fr 50px; gap: 14px; align-items: center; }
-    .language-track { height: 9px; overflow: hidden; background: var(--surface-3); border-radius: 99px; }
-    .language-level { height: 100%; background: linear-gradient(90deg,var(--primary),var(--secondary)); border-radius: inherit; }
-
-    .contact-card { display: grid; grid-template-columns: 1.1fr .9fr; gap: 26px; padding: 34px; background: linear-gradient(135deg, rgba(53,208,160,.13), rgba(96,165,250,.09)); border: 1px solid rgba(53,208,160,.24); border-radius: 24px; }
-    .contact-card h2 { font-size: clamp(2rem,4vw,3rem); font-weight: 900; }
-    .contact-card p { color: var(--muted); }
-    .contact-details { display: grid; gap: 13px; align-content: center; }
-    .contact-details a,
-    .contact-details div { display: flex; align-items: center; gap: 12px; color: var(--text); text-decoration: none; }
-    .contact-details i { width: 22px; color: var(--primary); text-align: center; }
-
-    footer { margin-left: var(--sidebar-width); padding: 28px; color: var(--muted); border-top: 1px solid var(--border); text-align: center; }
-
-    :focus-visible { outline: 3px solid rgba(53,208,160,.65); outline-offset: 3px; }
-
-    @media (max-width: 1100px) {
-      .skills-grid, .projects-grid { grid-template-columns: repeat(2,minmax(0,1fr)); }
-      .kpi-grid { grid-template-columns: repeat(2,minmax(0,1fr)); }
-    }
-
-    @media (max-width: 860px) {
-      .mobile-header { display: flex; }
-      .sidebar { transform: translateX(-105%); }
-      .sidebar.open { transform: translateX(0); }
-      .sidebar-overlay.show { display: block; }
-      main, footer { margin-left: 0; }
-      main { padding-top: 68px; }
-      .hero { min-height: calc(100vh - 68px); }
-      .about-grid, .contact-card { grid-template-columns: 1fr; }
-      section { padding: 72px 22px; }
-    }
-
-    @media (max-width: 620px) {
-      .hero h2 { font-size: 2.55rem; }
-      .kpi-grid, .skills-grid, .projects-grid, .cert-grid, .education-grid { grid-template-columns: 1fr; }
-      .language-row { grid-template-columns: 105px 1fr 38px; font-size: .88rem; }
-      .timeline { margin-left: 1px; padding-left: 27px; }
-      .timeline-item::before { left: -28px; }
-      .contact-card { padding: 24px; }
-    }
-
-    @media print {
-      .sidebar, .mobile-header, .sidebar-overlay, .hero-actions, .project-filters { display: none !important; }
-      body { color: #111827; background: white; }
-      main, footer { margin-left: 0; }
-      section { padding: 28px; break-inside: avoid; }
-      .hero { min-height: auto; }
-      .content-card, .project-card, .skill-group, .kpi-card, .education-card, .timeline-item { color: #111827; background: #fff; border: 1px solid #d1d5db; box-shadow: none; }
-      .hero h2, .section-heading h2, .content-card h3, .project-card h3 { color: #111827; }
-    }
+    :root{--bg:#080d18;--surface:#101827;--surface2:#172033;--text:#e8eef8;--muted:#9aa9bd;--primary:#35d0a0;--secondary:#60a5fa;--gold:#fbbf24;--border:rgba(148,163,184,.18);--sidebar:300px;--radius:18px;--shadow:0 18px 50px rgba(0,0,0,.25)}
+    *{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:24px}body{margin:0;overflow-x:hidden;background:radial-gradient(circle at 82% 5%,rgba(96,165,250,.12),transparent 30%),radial-gradient(circle at 45% 43%,rgba(53,208,160,.06),transparent 34%),var(--bg);color:var(--text);font-family:Inter,"Segoe UI",Arial,sans-serif;line-height:1.7}body.menu-open{overflow:hidden}a{color:inherit}img{max-width:100%}.skip{position:fixed;top:-100px;left:1rem;z-index:3000;padding:.75rem 1rem;background:var(--primary);color:#05120e;border-radius:8px;font-weight:800}.skip:focus{top:1rem}
+    .sidebar{position:fixed;inset:0 auto 0 0;z-index:1050;width:var(--sidebar);padding:25px;overflow-y:auto;background:rgba(16,24,39,.97);border-right:1px solid var(--border);backdrop-filter:blur(16px);transition:transform .3s}.profile{text-align:center}.profile-img{width:124px;height:124px;object-fit:cover;border:4px solid var(--primary);border-radius:50%;box-shadow:0 0 0 8px rgba(53,208,160,.08)}.profile h1{margin:16px 0 4px;font-size:1.36rem}.role{margin:0;color:var(--primary);font-size:.92rem;font-weight:800}.location{margin:6px 0;color:var(--muted);font-size:.84rem}.available{display:inline-flex;align-items:center;gap:8px;margin-top:9px;padding:6px 11px;color:#a7f3d0;background:rgba(16,185,129,.11);border:1px solid rgba(52,211,153,.2);border-radius:999px;font-size:.77rem}.available:before{width:8px;height:8px;content:"";background:#34d399;border-radius:50%;box-shadow:0 0 10px #34d399}.socials{display:flex;justify-content:center;gap:9px;margin:17px 0}.socials a,.menu-button{display:grid;width:41px;height:41px;place-items:center;background:var(--surface2);border:1px solid var(--border);border-radius:11px;text-decoration:none}.socials a:hover{color:#07130f;background:var(--primary)}nav a{display:flex;align-items:center;gap:12px;margin:3px 0;padding:9px 12px;color:var(--muted);border-radius:10px;text-decoration:none}nav a i{width:20px;text-align:center}nav a:hover,nav a.active{color:#07130f;background:var(--primary);font-weight:800}.download{display:flex;justify-content:center;gap:8px;margin-top:13px;padding:10px;background:var(--primary);color:#07130f;border-radius:10px;font-weight:800;text-decoration:none}
+    .mobile-header{display:none;position:fixed;inset:0 0 auto;z-index:1100;align-items:center;justify-content:space-between;height:66px;padding:0 18px;background:rgba(8,13,24,.95);border-bottom:1px solid var(--border)}.menu-button{color:var(--text);cursor:pointer}.overlay{display:none;position:fixed;inset:0;z-index:1040;background:rgba(0,0,0,.66)}main,footer{margin-left:var(--sidebar)}section{padding:86px clamp(24px,6vw,88px)}.wrap{width:min(1180px,100%);margin:auto}.hero{display:flex;min-height:100vh;align-items:center}.eyebrow{display:inline-flex;align-items:center;gap:8px;margin-bottom:17px;color:var(--primary);font-weight:900;letter-spacing:.08em;text-transform:uppercase}.hero h2{max-width:950px;margin:0;font-size:clamp(2.6rem,6vw,5.6rem);font-weight:900;line-height:1;letter-spacing:-.05em}.gradient{color:transparent;background:linear-gradient(100deg,var(--primary),#7dd3fc);background-clip:text;-webkit-background-clip:text}.hero p{max-width:830px;margin:27px 0;color:var(--muted);font-size:1.1rem}.actions{display:flex;flex-wrap:wrap;gap:11px}.btn{display:inline-flex;align-items:center;gap:9px;padding:12px 18px;border-radius:11px;font-weight:800;text-decoration:none}.btn-primary{color:#07130f;background:var(--primary)}.btn-secondary{background:var(--surface2);border:1px solid var(--border)}
+    .grid{display:grid;gap:17px}.kpis{grid-template-columns:repeat(4,1fr);margin-top:49px}.skills,.projects{grid-template-columns:repeat(3,1fr)}.education,.cert-badges{grid-template-columns:repeat(2,1fr)}.industries{grid-template-columns:repeat(4,1fr)}.card,.timeline-item{padding:24px;background:linear-gradient(145deg,rgba(23,32,51,.93),rgba(16,24,39,.93));border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--shadow)}.kpi strong{display:block;color:var(--primary);font-size:1.95rem;line-height:1}.kpi span,.card p,.timeline-item p,.heading p{color:var(--muted)}.heading{margin-bottom:35px}.heading span{color:var(--primary);font-weight:900;letter-spacing:.08em;text-transform:uppercase}.heading h2{margin:6px 0;font-size:clamp(2rem,4vw,3rem)}.about{grid-template-columns:1.45fr .75fr}.focus{display:grid;gap:11px;margin:0;padding:0;list-style:none}.focus i{margin-right:8px;color:var(--primary)}
+    .timeline{position:relative;margin-left:10px;padding-left:35px}.timeline:before{position:absolute;top:5px;bottom:5px;left:6px;width:2px;content:"";background:linear-gradient(var(--primary),rgba(96,165,250,.25))}.timeline-item{position:relative;margin-bottom:20px}.timeline-item:before{position:absolute;top:27px;left:-36px;width:15px;height:15px;content:"";background:var(--primary);border:4px solid var(--bg);border-radius:50%}.timeline-item h3{margin:0}.company,.project a{color:var(--primary)}.period{display:block;margin-top:7px;color:var(--secondary);font-size:.86rem;font-weight:800}.tags,.tech-badges{display:flex;flex-wrap:wrap;gap:9px}.tag{padding:7px 10px;color:#cbd8e7;background:rgba(96,165,250,.08);border:1px solid rgba(96,165,250,.14);border-radius:999px;font-size:.81rem}.project{display:flex;min-height:270px;flex-direction:column}.project a{margin-top:auto;font-weight:800;text-decoration:none}.industry{text-align:center}.industry i{display:block;margin-bottom:9px;color:var(--primary);font-size:1.4rem}
+    .cert-badges{margin-top:22px}.badge-card{position:relative;overflow:hidden;text-align:center;transition:transform .25s,border-color .25s}.badge-card:hover{transform:translateY(-5px);border-color:var(--primary)}.badge-icon{display:grid;width:96px;height:96px;margin:0 auto 14px;place-items:center;color:#07130f;background:linear-gradient(135deg,var(--primary),#7dd3fc);border:7px double rgba(8,13,24,.65);border-radius:50%;font-size:2.15rem;box-shadow:0 0 0 5px rgba(53,208,160,.11)}.badge-card h3{margin:8px 0 4px}.badge-level{display:inline-block;margin-bottom:7px;padding:3px 10px;color:var(--gold);border:1px solid rgba(251,191,36,.28);border-radius:99px;font-size:.76rem;font-weight:900;letter-spacing:.04em;text-transform:uppercase}
+    .tech-panel{margin-top:22px}.tech-badge{display:inline-flex;align-items:center;gap:8px;padding:9px 12px;background:#111827;border:1px solid var(--border);border-radius:10px;text-decoration:none;font-size:.85rem;font-weight:800;transition:.2s}.tech-badge:hover{transform:translateY(-2px);border-color:var(--primary);color:var(--primary)}.tech-badge i{font-size:1.25rem}.tech-badge .fa-solid,.tech-badge .fa-brands{color:var(--primary)}
+    .language{display:grid;grid-template-columns:140px 1fr 45px;gap:13px;align-items:center;margin:15px 0}.track{height:9px;overflow:hidden;background:#1e293b;border-radius:99px}.level{height:100%;background:linear-gradient(90deg,var(--primary),var(--secondary))}.contact{grid-template-columns:1.1fr .9fr;padding:32px;background:linear-gradient(135deg,rgba(53,208,160,.13),rgba(96,165,250,.09));border:1px solid rgba(53,208,160,.24);border-radius:24px}.contact-links{display:grid;gap:11px;align-content:center}.contact-links a{text-decoration:none}.contact-links i{width:22px;color:var(--primary)}footer{padding:25px;color:var(--muted);border-top:1px solid var(--border);text-align:center}
+    @media(max-width:1100px){.skills,.projects{grid-template-columns:repeat(2,1fr)}.kpis,.industries{grid-template-columns:repeat(2,1fr)}}@media(max-width:860px){.mobile-header{display:flex}.sidebar{transform:translateX(-105%)}.sidebar.open{transform:none}.overlay.show{display:block}main,footer{margin-left:0}main{padding-top:66px}.hero{min-height:calc(100vh - 66px)}.about,.contact{grid-template-columns:1fr}section{padding:70px 22px}}@media(max-width:620px){.hero h2{font-size:2.45rem}.kpis,.skills,.projects,.education,.cert-badges,.industries{grid-template-columns:1fr}.language{grid-template-columns:100px 1fr 42px}.timeline{padding-left:27px}.timeline-item:before{left:-28px}}@media print{.sidebar,.mobile-header,.overlay,.actions{display:none!important}body{background:#fff;color:#111827}main,footer{margin:0}section{padding:25px}.card,.timeline-item{background:#fff;color:#111827;box-shadow:none}}
   </style>
 </head>
 <body>
-  <a class="skip-link" href="#main">Skip to content</a>
-
-  <header class="mobile-header">
-    <span class="mobile-brand">Carlos Oliveira</span>
-    <button class="mobile-menu-button" id="menuButton" type="button" aria-label="Open menu" aria-controls="sidebar" aria-expanded="false">
-      <i class="fa-solid fa-bars"></i>
-    </button>
-  </header>
-
-  <div class="sidebar-overlay" id="overlay"></div>
-
-  <aside class="sidebar" id="sidebar" aria-label="Portfolio navigation">
-    <div class="profile">
-      <img src="./images/eu2.png" alt="Portrait of Carlos Oliveira" class="profile-img">
-      <h1>Carlos Oliveira</h1>
-      <p class="profile-role" data-i18n="profileRole">Senior QA Automation Engineer</p>
-      <p class="profile-location"><i class="fa-solid fa-location-dot"></i> Lisbon, Portugal</p>
-      <span class="availability" data-i18n="availability">Open to international opportunities</span>
-    </div>
-
-    <div class="socials" aria-label="Social profiles">
-      <a href="https://www.linkedin.com/in/carlosoliveira1984" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
-      <a href="https://github.com/carloseduardo1984" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
-      <a href="mailto:carloseduardo1984@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
-    </div>
-
-    <nav class="side-nav">
-      <a href="#home" class="active"><i class="fa-solid fa-house"></i><span data-i18n="navHome">Home</span></a>
-      <a href="#about"><i class="fa-solid fa-user"></i><span data-i18n="navAbout">About</span></a>
-      <a href="#experience"><i class="fa-solid fa-briefcase"></i><span data-i18n="navExperience">Experience</span></a>
-      <a href="#skills"><i class="fa-solid fa-code"></i><span data-i18n="navSkills">Skills</span></a>
-      <a href="#projects"><i class="fa-solid fa-folder-open"></i><span data-i18n="navProjects">Projects</span></a>
-      <a href="#education"><i class="fa-solid fa-graduation-cap"></i><span data-i18n="navEducation">Education</span></a>
-      <a href="#languages"><i class="fa-solid fa-language"></i><span data-i18n="navLanguages">Languages</span></a>
-      <a href="#contact"><i class="fa-solid fa-paper-plane"></i><span data-i18n="navContact">Contact</span></a>
-    </nav>
-
-    <div class="language-switcher" aria-label="Language selection">
-      <button class="lang-button active" type="button" data-lang="en">EN</button>
-      <button class="lang-button" type="button" data-lang="es">ES</button>
-      <button class="lang-button" type="button" data-lang="de">DE</button>
-    </div>
-
-    <a class="download-button" href="./Carlos_Eduardo_de_Oliveira_CV_European_Styled_2026.pdf" download>
-      <i class="fa-solid fa-download"></i><span data-i18n="downloadCV">Download CV</span>
-    </a>
-  </aside>
-
-  <main id="main">
-    <section class="hero" id="home">
-      <div class="content-wrap">
-        <div class="eyebrow"><i class="fa-solid fa-shield-halved"></i><span data-i18n="heroEyebrow">Quality engineering leadership</span></div>
-        <h2><span data-i18n="heroLine1">Building quality into</span><br><span class="gradient-text" data-i18n="heroLine2">every software delivery.</span></h2>
-        <p class="hero-description" data-i18n="heroDescription">Senior Software QA Automation Engineer and Quality Engineering Leader focused on scalable automation, risk-based testing, CI/CD quality gates, APIs, microservices and AI-driven testing.</p>
-        <div class="hero-actions">
-          <a class="button-primary" href="#projects"><i class="fa-solid fa-diagram-project"></i><span data-i18n="viewProjects">View projects</span></a>
-          <a class="button-secondary" href="#contact"><i class="fa-solid fa-paper-plane"></i><span data-i18n="contactMe">Contact me</span></a>
-        </div>
-
-        <div class="kpi-grid">
-          <div class="kpi-card"><strong>23+</strong><span data-i18n="kpiExperience">Years of professional experience</span></div>
-          <div class="kpi-card"><strong>100+</strong><span data-i18n="kpiProjects">Projects across global sectors</span></div>
-          <div class="kpi-card"><strong>52</strong><span data-i18n="kpiCertifications">Test Automation University certifications</span></div>
-          <div class="kpi-card"><strong>15+</strong><span data-i18n="kpiLaunches">Validated application launches</span></div>
-        </div>
-      </div>
-    </section>
-
-    <section id="about">
-      <div class="content-wrap">
-        <div class="section-heading">
-          <span data-i18n="aboutLabel">Profile</span>
-          <h2 data-i18n="aboutTitle">About me</h2>
-        </div>
-        <div class="about-grid">
-          <article class="content-card">
-            <p data-i18n="aboutText">Quality Engineering professional with an end-to-end background in electronics, industrial automation, software development and software testing. I combine hands-on automation expertise with test strategy, mentoring and continuous improvement across web, mobile, API, microservices and event-driven solutions. My experience includes medical, banking, automotive, logistics, e-commerce and supply-chain environments.</p>
-          </article>
-          <article class="content-card">
-            <ul class="focus-list">
-              <li><i class="fa-solid fa-circle-check"></i><span data-i18n="focus1">Automation strategy and frameworks</span></li>
-              <li><i class="fa-solid fa-circle-check"></i><span data-i18n="focus2">Risk-based quality planning</span></li>
-              <li><i class="fa-solid fa-circle-check"></i><span data-i18n="focus3">QA coaching and mentoring</span></li>
-              <li><i class="fa-solid fa-circle-check"></i><span data-i18n="focus4">AI-supported quality engineering</span></li>
-            </ul>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section id="experience">
-      <div class="content-wrap">
-        <div class="section-heading">
-          <span data-i18n="experienceLabel">Professional journey</span>
-          <h2 data-i18n="experienceTitle">Selected experience</h2>
-          <p data-i18n="experienceIntro">A selection of roles and industries that shaped my quality engineering, leadership and automation background.</p>
-        </div>
-        <div class="timeline">
-          <article class="timeline-item">
-            <h3><span class="company">Swiss Post</span> | <span data-i18n="roleSwissPost">Senior Software Test Automation Engineer</span></h3>
-            <p data-i18n="descSwissPost">Test automation and system integration for logistics, customs-clearance platforms, microservices, SAP and Kafka-based architectures.</p>
-          </article>
-          <article class="timeline-item">
-            <h3><span class="company">Johnson & Johnson</span> | <span data-i18n="roleJJ">Software Quality Assurance and QA Mentor</span></h3>
-            <p data-i18n="descJJ">Quality assurance for global medical solutions, including test planning, automation, validation, stakeholder enablement and regulated quality practices.</p>
-          </article>
-          <article class="timeline-item">
-            <h3><span class="company">Citibank</span> | <span data-i18n="roleCiti">Senior Software Tester and Test Lead</span></h3>
-            <p data-i18n="descCiti">Software quality activities for business and finance solutions, supported by Jira, Confluence, structured test management and risk analysis.</p>
-          </article>
-          <article class="timeline-item">
-            <h3><span class="company">Diebold, Dell, Ingenico and others</span> | <span data-i18n="roleEngineering">Quality and Automation Engineering</span></h3>
-            <p data-i18n="descEngineering">Engineering, embedded electronics, software validation, industrial automation and technical leadership across complex products and systems.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section id="skills">
-      <div class="content-wrap">
-        <div class="section-heading">
-          <span data-i18n="skillsLabel">Technology matrix</span>
-          <h2 data-i18n="skillsTitle">Technical expertise</h2>
-          <p data-i18n="skillsIntro">Tools and practices grouped by capability to provide a clearer view of my professional stack.</p>
-        </div>
-        <div class="skills-grid">
-          <article class="skill-group"><h3><i class="fa-solid fa-robot"></i> <span data-i18n="skillAutomation">Test automation</span></h3><div class="skill-tags"><span class="skill-tag">Robot Framework</span><span class="skill-tag">Playwright</span><span class="skill-tag">Selenium</span><span class="skill-tag">Cypress</span><span class="skill-tag">Appium</span><span class="skill-tag">Applitools Eyes</span></div></article>
-          <article class="skill-group"><h3><i class="fa-solid fa-network-wired"></i> <span data-i18n="skillServices">API and services</span></h3><div class="skill-tags"><span class="skill-tag">Postman</span><span class="skill-tag">Newman</span><span class="skill-tag">Talend API</span><span class="skill-tag">Bruno</span><span class="skill-tag">Microservices</span><span class="skill-tag">Kafka</span></div></article>
-          <article class="skill-group"><h3><i class="fa-solid fa-gauge-high"></i> <span data-i18n="skillPerformance">Performance and observability</span></h3><div class="skill-tags"><span class="skill-tag">JMeter</span><span class="skill-tag">Dynatrace</span><span class="skill-tag">Performance Testing</span><span class="skill-tag">Non-functional Testing</span></div></article>
-          <article class="skill-group"><h3><i class="fa-solid fa-code-branch"></i> DevOps & CI/CD</h3><div class="skill-tags"><span class="skill-tag">GitHub Actions</span><span class="skill-tag">Jenkins</span><span class="skill-tag">Azure DevOps</span><span class="skill-tag">Docker</span><span class="skill-tag">Quality Gates</span></div></article>
-          <article class="skill-group"><h3><i class="fa-solid fa-laptop-code"></i> <span data-i18n="skillLanguages">Programming</span></h3><div class="skill-tags"><span class="skill-tag">Python</span><span class="skill-tag">Java</span><span class="skill-tag">JavaScript</span><span class="skill-tag">C#</span><span class="skill-tag">C++</span><span class="skill-tag">SQL</span></div></article>
-          <article class="skill-group"><h3><i class="fa-solid fa-chess"></i> <span data-i18n="skillStrategy">Quality strategy</span></h3><div class="skill-tags"><span class="skill-tag">Risk-based Testing</span><span class="skill-tag">Shift Left</span><span class="skill-tag">TDD</span><span class="skill-tag">BDD</span><span class="skill-tag">GxP</span><span class="skill-tag">SDLC</span><span class="skill-tag">Agile</span><span class="skill-tag">TMMi</span></div></article>
-        </div>
-      </div>
-    </section>
-
-    <section id="projects">
-      <div class="content-wrap">
-        <div class="section-heading">
-          <span data-i18n="projectsLabel">GitHub portfolio</span>
-          <h2 data-i18n="projectsTitle">Featured projects</h2>
-          <p data-i18n="projectsIntro">Practical examples covering test management, UI automation, API testing and CI/CD.</p>
-        </div>
-        <div class="project-filters" aria-label="Project filters">
-          <button class="filter-button active" type="button" data-filter="all" data-i18n="filterAll">All</button>
-          <button class="filter-button" type="button" data-filter="automation" data-i18n="filterAutomation">Automation</button>
-          <button class="filter-button" type="button" data-filter="api">API</button>
-          <button class="filter-button" type="button" data-filter="management" data-i18n="filterManagement">Management</button>
-        </div>
-        <div class="projects-grid">
-          <article class="project-card" data-category="management">
-            <div class="project-icon"><i class="fa-brands fa-jira"></i></div>
-            <h3>Jira and Confluence</h3>
-            <p data-i18n="projectJiraDesc">Examples of QA organization, test management, documentation and collaborative ways of working.</p>
-            <div class="project-tools">Jira • Confluence • QA Management</div>
-            <a class="project-link" href="https://github.com/carloseduardo1984/JIRA_Confluence" target="_blank" rel="noopener noreferrer"><span data-i18n="openProject">Open project</span><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-          </article>
-          <article class="project-card" data-category="automation">
-            <div class="project-icon"><i class="fa-solid fa-vial-circle-check"></i></div>
-            <h3>Cypress BDD and GitHub Actions</h3>
-            <p data-i18n="projectCypressDesc">UI test automation project with BDD scenarios and continuous execution through GitHub Actions.</p>
-            <div class="project-tools">Cypress • BDD • JavaScript • CI/CD</div>
-            <a class="project-link" href="https://github.com/carloseduardo1984/Cypress_bdd_actions_v10" target="_blank" rel="noopener noreferrer"><span data-i18n="openProject">Open project</span><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-          </article>
-          <article class="project-card" data-category="api automation">
-            <div class="project-icon"><i class="fa-solid fa-cloud-arrow-up"></i></div>
-            <h3>API Testing with GitHub Actions</h3>
-            <p data-i18n="projectApiDesc">API quality checks integrated into a CI workflow for consistent and repeatable validation.</p>
-            <div class="project-tools">API Testing • GitHub Actions • Automation</div>
-            <a class="project-link" href="https://github.com/carloseduardo1984/api_with_github_actions" target="_blank" rel="noopener noreferrer"><span data-i18n="openProject">Open project</span><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section id="education">
-      <div class="content-wrap">
-        <div class="section-heading">
-          <span data-i18n="educationLabel">Academic background</span>
-          <h2 data-i18n="educationTitle">Education and certifications</h2>
-        </div>
-        <div class="education-grid">
-          <article class="education-card"><small>MBA</small><h3 data-i18n="eduMBA">Strategic Management and Business Intelligence</h3><p data-i18n="eduMBADesc">Leadership, strategy, innovation and business-oriented decision making.</p></article>
-          <article class="education-card"><small data-i18n="postgraduate">Postgraduate degree</small><h3 data-i18n="eduPost">Electronic Systems and Automation Engineering</h3><p data-i18n="eduPostDesc">Industrial automation, instrumentation, control and intelligent systems.</p></article>
-          <article class="education-card"><small data-i18n="bachelor">Bachelor's degree</small><h3 data-i18n="eduBachelor">Industrial Automation and Information Technology</h3><p data-i18n="eduBachelorDesc">Automation, electronics, software and control systems.</p></article>
-          <article class="education-card"><small data-i18n="professionalTraining">Professional training</small><h3>Test Automation University</h3><p data-i18n="eduTAU">52 certifications covering automation, APIs, CI/CD, performance, AI-driven testing and quality engineering.</p></article>
-        </div>
-      </div>
-    </section>
-
-    <section id="languages">
-      <div class="content-wrap">
-        <div class="section-heading"><span data-i18n="languagesLabel">Communication</span><h2 data-i18n="languagesTitle">Languages</h2></div>
-        <div class="content-card language-list">
-          <div class="language-row"><strong>Português</strong><div class="language-track"><div class="language-level" style="width:100%"></div></div><span>C2</span></div>
-          <div class="language-row"><strong>English</strong><div class="language-track"><div class="language-level" style="width:88%"></div></div><span>C1</span></div>
-          <div class="language-row"><strong>Español</strong><div class="language-track"><div class="language-level" style="width:88%"></div></div><span>C1</span></div>
-          <div class="language-row"><strong>Deutsch</strong><div class="language-track"><div class="language-level" style="width:35%"></div></div><span>A2</span></div>
-          <div class="language-row"><strong>Italiano</strong><div class="language-track"><div class="language-level" style="width:18%"></div></div><span>A1</span></div>
-          <div class="language-row"><strong>Français</strong><div class="language-track"><div class="language-level" style="width:18%"></div></div><span>A1</span></div>
-        </div>
-      </div>
-    </section>
-
-    <section id="contact">
-      <div class="content-wrap">
-        <div class="contact-card">
-          <div>
-            <span class="eyebrow" data-i18n="contactLabel">Let's connect</span>
-            <h2 data-i18n="contactTitle">Interested in building scalable quality engineering?</h2>
-            <p data-i18n="contactText">I am interested in international opportunities in QA leadership, test strategy, automation engineering and AI-supported software quality.</p>
-          </div>
-          <div class="contact-details">
-            <a href="mailto:carloseduardo1984@gmail.com"><i class="fa-solid fa-envelope"></i><span>carloseduardo1984@gmail.com</span></a>
-            <a href="https://www.linkedin.com/in/carlosoliveira1984" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin"></i><span>LinkedIn</span></a>
-            <a href="https://github.com/carloseduardo1984" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i><span>GitHub</span></a>
-            <div><i class="fa-solid fa-location-dot"></i><span>Lisbon, Portugal</span></div>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer><span>© <span id="currentYear"></span> Carlos Oliveira. </span><span data-i18n="footerText">Designed as a multilingual QA engineering portfolio.</span></footer>
-
-  <script>
-    const translations = {
-      en: {
-        pageTitle: "Carlos Oliveira | Senior QA Automation Engineer", profileRole: "Senior QA Automation Engineer", availability: "Open to international opportunities",
-        navHome: "Home", navAbout: "About", navExperience: "Experience", navSkills: "Skills", navProjects: "Projects", navEducation: "Education", navLanguages: "Languages", navContact: "Contact", downloadCV: "Download CV",
-        heroEyebrow: "Quality engineering leadership", heroLine1: "Building quality into", heroLine2: "every software delivery.", heroDescription: "Senior Software QA Automation Engineer and Quality Engineering Leader focused on scalable automation, risk-based testing, CI/CD quality gates, APIs, microservices and AI-driven testing.", viewProjects: "View projects", contactMe: "Contact me",
-        kpiExperience: "Years of professional experience", kpiProjects: "Projects across global sectors", kpiCertifications: "Test Automation University certifications", kpiLaunches: "Validated application launches",
-        aboutLabel: "Profile", aboutTitle: "About me", aboutText: "Quality Engineering professional with an end-to-end background in electronics, industrial automation, software development and software testing. I combine hands-on automation expertise with test strategy, mentoring and continuous improvement across web, mobile, API, microservices and event-driven solutions. My experience includes medical, banking, automotive, logistics, e-commerce and supply-chain environments.",
-        focus1: "Automation strategy and frameworks", focus2: "Risk-based quality planning", focus3: "QA coaching and mentoring", focus4: "AI-supported quality engineering",
-        experienceLabel: "Professional journey", experienceTitle: "Selected experience", experienceIntro: "A selection of roles and industries that shaped my quality engineering, leadership and automation background.", roleSwissPost: "Senior Software Test Automation Engineer", descSwissPost: "Test automation and system integration for logistics, customs-clearance platforms, microservices, SAP and Kafka-based architectures.", roleJJ: "Software Quality Assurance and QA Mentor", descJJ: "Quality assurance for global medical solutions, including test planning, automation, validation, stakeholder enablement and regulated quality practices.", roleCiti: "Senior Software Tester and Test Lead", descCiti: "Software quality activities for business and finance solutions, supported by Jira, Confluence, structured test management and risk analysis.", roleEngineering: "Quality and Automation Engineering", descEngineering: "Engineering, embedded electronics, software validation, industrial automation and technical leadership across complex products and systems.",
-        skillsLabel: "Technology matrix", skillsTitle: "Technical expertise", skillsIntro: "Tools and practices grouped by capability to provide a clearer view of my professional stack.", skillAutomation: "Test automation", skillServices: "API and services", skillPerformance: "Performance and observability", skillLanguages: "Programming", skillStrategy: "Quality strategy",
-        projectsLabel: "GitHub portfolio", projectsTitle: "Featured projects", projectsIntro: "Practical examples covering test management, UI automation, API testing and CI/CD.", filterAll: "All", filterAutomation: "Automation", filterManagement: "Management", projectJiraDesc: "Examples of QA organization, test management, documentation and collaborative ways of working.", projectCypressDesc: "UI test automation project with BDD scenarios and continuous execution through GitHub Actions.", projectApiDesc: "API quality checks integrated into a CI workflow for consistent and repeatable validation.", openProject: "Open project",
-        educationLabel: "Academic background", educationTitle: "Education and certifications", eduMBA: "Strategic Management and Business Intelligence", eduMBADesc: "Leadership, strategy, innovation and business-oriented decision making.", postgraduate: "Postgraduate degree", eduPost: "Electronic Systems and Automation Engineering", eduPostDesc: "Industrial automation, instrumentation, control and intelligent systems.", bachelor: "Bachelor's degree", eduBachelor: "Industrial Automation and Information Technology", eduBachelorDesc: "Automation, electronics, software and control systems.", professionalTraining: "Professional training", eduTAU: "52 certifications covering automation, APIs, CI/CD, performance, AI-driven testing and quality engineering.",
-        languagesLabel: "Communication", languagesTitle: "Languages", contactLabel: "Let's connect", contactTitle: "Interested in building scalable quality engineering?", contactText: "I am interested in international opportunities in QA leadership, test strategy, automation engineering and AI-supported software quality.", footerText: "Designed as a multilingual QA engineering portfolio."
-      },
-      es: {
-        pageTitle: "Carlos Oliveira | Ingeniero Senior de Automatización QA", profileRole: "Ingeniero Senior de Automatización QA", availability: "Abierto a oportunidades internacionales",
-        navHome: "Inicio", navAbout: "Sobre mí", navExperience: "Experiencia", navSkills: "Habilidades", navProjects: "Proyectos", navEducation: "Formación", navLanguages: "Idiomas", navContact: "Contacto", downloadCV: "Descargar CV",
-        heroEyebrow: "Liderazgo en ingeniería de calidad", heroLine1: "Integrando calidad en", heroLine2: "cada entrega de software.", heroDescription: "Ingeniero Senior de Automatización QA y líder de Quality Engineering, enfocado en automatización escalable, pruebas basadas en riesgos, quality gates de CI/CD, APIs, microservicios y pruebas impulsadas por IA.", viewProjects: "Ver proyectos", contactMe: "Contactar",
-        kpiExperience: "Años de experiencia profesional", kpiProjects: "Proyectos en sectores globales", kpiCertifications: "Certificaciones de Test Automation University", kpiLaunches: "Lanzamientos de aplicaciones validados",
-        aboutLabel: "Perfil", aboutTitle: "Sobre mí", aboutText: "Profesional de Quality Engineering con experiencia integral en electrónica, automatización industrial, desarrollo de software y pruebas. Combino experiencia práctica en automatización con estrategia de pruebas, mentoring y mejora continua en soluciones web, móviles, APIs, microservicios y arquitecturas orientadas a eventos. Mi experiencia abarca los sectores médico, bancario, automotriz, logístico, e-commerce y supply chain.",
-        focus1: "Estrategia y frameworks de automatización", focus2: "Planificación de calidad basada en riesgos", focus3: "Coaching y mentoring de QA", focus4: "Ingeniería de calidad apoyada por IA",
-        experienceLabel: "Trayectoria profesional", experienceTitle: "Experiencia seleccionada", experienceIntro: "Una selección de roles e industrias que consolidaron mi experiencia en calidad, liderazgo y automatización.", roleSwissPost: "Ingeniero Senior de Automatización de Pruebas", descSwissPost: "Automatización de pruebas e integración de sistemas para logística, plataformas aduaneras, microservicios, SAP y arquitecturas basadas en Kafka.", roleJJ: "Software Quality Assurance y mentor QA", descJJ: "Calidad de software para soluciones médicas globales, incluyendo planificación, automatización, validación, formación de stakeholders y prácticas reguladas.", roleCiti: "Senior Software Tester y Test Lead", descCiti: "Actividades de calidad para soluciones financieras y de negocio, apoyadas por Jira, Confluence, gestión estructurada de pruebas y análisis de riesgos.", roleEngineering: "Ingeniería de Calidad y Automatización", descEngineering: "Ingeniería, electrónica embebida, validación de software, automatización industrial y liderazgo técnico en productos y sistemas complejos.",
-        skillsLabel: "Matriz tecnológica", skillsTitle: "Experiencia técnica", skillsIntro: "Herramientas y prácticas agrupadas por capacidad para presentar claramente mi stack profesional.", skillAutomation: "Automatización de pruebas", skillServices: "APIs y servicios", skillPerformance: "Rendimiento y observabilidad", skillLanguages: "Programación", skillStrategy: "Estrategia de calidad",
-        projectsLabel: "Portfolio de GitHub", projectsTitle: "Proyectos destacados", projectsIntro: "Ejemplos prácticos de gestión de pruebas, automatización UI, pruebas API y CI/CD.", filterAll: "Todos", filterAutomation: "Automatización", filterManagement: "Gestión", projectJiraDesc: "Ejemplos de organización QA, gestión de pruebas, documentación y formas colaborativas de trabajo.", projectCypressDesc: "Proyecto de automatización UI con escenarios BDD y ejecución continua mediante GitHub Actions.", projectApiDesc: "Validaciones de calidad API integradas en CI para una ejecución consistente y repetible.", openProject: "Abrir proyecto",
-        educationLabel: "Formación académica", educationTitle: "Educación y certificaciones", eduMBA: "Gestión Estratégica y Business Intelligence", eduMBADesc: "Liderazgo, estrategia, innovación y toma de decisiones orientada al negocio.", postgraduate: "Posgrado", eduPost: "Sistemas Electrónicos e Ingeniería de Automatización", eduPostDesc: "Automatización industrial, instrumentación, control y sistemas inteligentes.", bachelor: "Grado universitario", eduBachelor: "Automatización Industrial y Tecnología de la Información", eduBachelorDesc: "Automatización, electrónica, software y sistemas de control.", professionalTraining: "Formación profesional", eduTAU: "52 certificaciones sobre automatización, APIs, CI/CD, rendimiento, pruebas impulsadas por IA y Quality Engineering.",
-        languagesLabel: "Comunicación", languagesTitle: "Idiomas", contactLabel: "Conectemos", contactTitle: "¿Interesado en construir una ingeniería de calidad escalable?", contactText: "Estoy interesado en oportunidades internacionales en liderazgo QA, estrategia de pruebas, ingeniería de automatización y calidad de software apoyada por IA.", footerText: "Diseñado como portfolio multilingüe de ingeniería QA."
-      },
-      de: {
-        pageTitle: "Carlos Oliveira | Senior QA Automation Engineer", profileRole: "Senior QA Automation Engineer", availability: "Offen für internationale Möglichkeiten",
-        navHome: "Start", navAbout: "Über mich", navExperience: "Erfahrung", navSkills: "Kompetenzen", navProjects: "Projekte", navEducation: "Ausbildung", navLanguages: "Sprachen", navContact: "Kontakt", downloadCV: "CV herunterladen",
-        heroEyebrow: "Führung im Quality Engineering", heroLine1: "Qualität als Bestandteil", heroLine2: "jeder Softwarebereitstellung.", heroDescription: "Senior QA Automation Engineer und Quality Engineering Leader mit Fokus auf skalierbare Automatisierung, risikobasiertes Testen, CI/CD Quality Gates, APIs, Microservices und KI-gestützte Tests.", viewProjects: "Projekte ansehen", contactMe: "Kontakt aufnehmen",
-        kpiExperience: "Jahre Berufserfahrung", kpiProjects: "Projekte in globalen Branchen", kpiCertifications: "Zertifizierungen der Test Automation University", kpiLaunches: "Validierte Anwendungseinführungen",
-        aboutLabel: "Profil", aboutTitle: "Über mich", aboutText: "Quality-Engineering-Experte mit umfassendem Hintergrund in Elektronik, Industrieautomation, Softwareentwicklung und Softwaretests. Ich verbinde praktische Automatisierungsexpertise mit Teststrategie, Mentoring und kontinuierlicher Verbesserung für Web-, Mobile-, API-, Microservice- und ereignisgesteuerte Lösungen. Meine Erfahrung umfasst Medizin, Banking, Automotive, Logistik, E-Commerce und Supply Chain.",
-        focus1: "Automatisierungsstrategie und Frameworks", focus2: "Risikobasierte Qualitätsplanung", focus3: "QA-Coaching und Mentoring", focus4: "KI-gestütztes Quality Engineering",
-        experienceLabel: "Beruflicher Werdegang", experienceTitle: "Ausgewählte Erfahrung", experienceIntro: "Eine Auswahl an Rollen und Branchen, die meinen Hintergrund in Qualität, Führung und Automatisierung geprägt haben.", roleSwissPost: "Senior Software Test Automation Engineer", descSwissPost: "Testautomatisierung und Systemintegration für Logistik, Zollplattformen, Microservices, SAP und Kafka-basierte Architekturen.", roleJJ: "Software Quality Assurance und QA Mentor", descJJ: "Qualitätssicherung für globale medizinische Lösungen, einschließlich Testplanung, Automatisierung, Validierung, Stakeholder-Schulung und regulierter Qualitätspraktiken.", roleCiti: "Senior Software Tester und Test Lead", descCiti: "Softwarequalität für Geschäfts- und Finanzlösungen, unterstützt durch Jira, Confluence, strukturiertes Testmanagement und Risikoanalyse.", roleEngineering: "Qualitäts- und Automatisierungstechnik", descEngineering: "Engineering, eingebettete Elektronik, Softwarevalidierung, Industrieautomation und technische Führung für komplexe Produkte und Systeme.",
-        skillsLabel: "Technologiematrix", skillsTitle: "Technische Expertise", skillsIntro: "Nach Kompetenz gruppierte Tools und Praktiken für einen klaren Überblick über meinen professionellen Stack.", skillAutomation: "Testautomatisierung", skillServices: "APIs und Services", skillPerformance: "Performance und Observability", skillLanguages: "Programmierung", skillStrategy: "Qualitätsstrategie",
-        projectsLabel: "GitHub-Portfolio", projectsTitle: "Ausgewählte Projekte", projectsIntro: "Praxisbeispiele für Testmanagement, UI-Automatisierung, API-Tests und CI/CD.", filterAll: "Alle", filterAutomation: "Automatisierung", filterManagement: "Management", projectJiraDesc: "Beispiele für QA-Organisation, Testmanagement, Dokumentation und kollaborative Arbeitsweisen.", projectCypressDesc: "UI-Testautomatisierung mit BDD-Szenarien und kontinuierlicher Ausführung über GitHub Actions.", projectApiDesc: "In einen CI-Workflow integrierte API-Qualitätsprüfungen für konsistente und wiederholbare Validierung.", openProject: "Projekt öffnen",
-        educationLabel: "Akademischer Hintergrund", educationTitle: "Ausbildung und Zertifizierungen", eduMBA: "Strategisches Management und Business Intelligence", eduMBADesc: "Führung, Strategie, Innovation und geschäftsorientierte Entscheidungsfindung.", postgraduate: "Postgraduales Studium", eduPost: "Elektronische Systeme und Automatisierungstechnik", eduPostDesc: "Industrieautomation, Instrumentierung, Regelungstechnik und intelligente Systeme.", bachelor: "Bachelorabschluss", eduBachelor: "Industrieautomation und Informationstechnologie", eduBachelorDesc: "Automation, Elektronik, Software und Steuerungssysteme.", professionalTraining: "Berufliche Weiterbildung", eduTAU: "52 Zertifizierungen in Automatisierung, APIs, CI/CD, Performance, KI-gestütztem Testen und Quality Engineering.",
-        languagesLabel: "Kommunikation", languagesTitle: "Sprachen", contactLabel: "Kontakt", contactTitle: "Interesse an skalierbarem Quality Engineering?", contactText: "Ich interessiere mich für internationale Möglichkeiten in QA-Führung, Teststrategie, Automatisierungstechnik und KI-gestützter Softwarequalität.", footerText: "Als mehrsprachiges QA-Engineering-Portfolio gestaltet."
-      }
-    };
-
-    const sidebar = document.getElementById("sidebar");
-    const overlay = document.getElementById("overlay");
-    const menuButton = document.getElementById("menuButton");
-
-    function toggleMenu(forceState) {
-      const open = typeof forceState === "boolean" ? forceState : !sidebar.classList.contains("open");
-      sidebar.classList.toggle("open", open);
-      overlay.classList.toggle("show", open);
-      document.body.classList.toggle("menu-open", open);
-      menuButton.setAttribute("aria-expanded", String(open));
-      menuButton.innerHTML = open ? '<i class="fa-solid fa-xmark"></i>' : '<i class="fa-solid fa-bars"></i>';
-    }
-
-    menuButton.addEventListener("click", () => toggleMenu());
-    overlay.addEventListener("click", () => toggleMenu(false));
-
-    function applyLanguage(lang) {
-      const selected = translations[lang] ? lang : "en";
-      document.documentElement.lang = selected;
-      document.title = translations[selected].pageTitle;
-      document.querySelectorAll("[data-i18n]").forEach(element => {
-        const key = element.dataset.i18n;
-        if (translations[selected][key]) element.textContent = translations[selected][key];
-      });
-      document.querySelectorAll(".lang-button").forEach(button => button.classList.toggle("active", button.dataset.lang === selected));
-      localStorage.setItem("portfolioLanguage", selected);
-    }
-
-    document.querySelectorAll(".lang-button").forEach(button => {
-      button.addEventListener("click", () => applyLanguage(button.dataset.lang));
-    });
-
-    document.querySelectorAll(".filter-button").forEach(button => {
-      button.addEventListener("click", () => {
-        const filter = button.dataset.filter;
-        document.querySelectorAll(".filter-button").forEach(item => item.classList.remove("active"));
-        button.classList.add("active");
-        document.querySelectorAll(".project-card").forEach(card => {
-          const categories = card.dataset.category.split(" ");
-          card.classList.toggle("hidden", filter !== "all" && !categories.includes(filter));
-        });
-      });
-    });
-
-    const sections = [...document.querySelectorAll("main section[id]")];
-    const navLinks = [...document.querySelectorAll(".side-nav a")];
-
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          navLinks.forEach(link => link.classList.toggle("active", link.getAttribute("href") === `#${entry.target.id}`));
-        }
-      });
-    }, { rootMargin: "-35% 0px -55% 0px", threshold: 0 });
-
-    sections.forEach(section => observer.observe(section));
-    navLinks.forEach(link => link.addEventListener("click", () => {
-      if (window.innerWidth <= 860) toggleMenu(false);
-    }));
-
-    window.addEventListener("resize", () => {
-      if (window.innerWidth > 860) toggleMenu(false);
-    });
-
-    document.getElementById("currentYear").textContent = new Date().getFullYear();
-    applyLanguage(localStorage.getItem("portfolioLanguage") || "en");
-  </script>
+<a class="skip" href="#main">Skip to content</a>
+<header class="mobile-header"><strong>Carlos Oliveira</strong><button class="menu-button" id="menuButton" aria-label="Open menu" aria-expanded="false"><i class="fa-solid fa-bars"></i></button></header>
+<div class="overlay" id="overlay"></div>
+<aside class="sidebar" id="sidebar">
+  <div class="profile"><img class="profile-img" src="./images/eu2.png" alt="Carlos Oliveira" width="124" height="124"><h1>Carlos Oliveira</h1><p class="role">Senior Quality Engineering Leader</p><p class="location"><i class="fa-solid fa-location-dot"></i> Valencia, Spain</p><span class="available">Available for Valencia and remote opportunities</span></div>
+  <div class="socials"><a href="https://www.linkedin.com/in/carlosoliveira1984/" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin-in"></i></a><a href="https://github.com/carloseduardo1984" aria-label="GitHub" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i></a><a href="mailto:carloseduardo1984@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a></div>
+  <nav aria-label="Portfolio navigation"><a class="active" href="#home"><i class="fa-solid fa-house"></i>Home</a><a href="#about"><i class="fa-solid fa-user"></i>About</a><a href="#experience"><i class="fa-solid fa-briefcase"></i>Experience</a><a href="#skills"><i class="fa-solid fa-code"></i>Skills</a><a href="#projects"><i class="fa-solid fa-folder-open"></i>Projects</a><a href="#credentials"><i class="fa-solid fa-certificate"></i>Credentials</a><a href="#languages"><i class="fa-solid fa-language"></i>Languages</a><a href="#contact"><i class="fa-solid fa-paper-plane"></i>Contact</a></nav>
+  <a class="download" href="./Carlos_Eduardo_de_Oliveira_CV_European_Styled_2026.pdf" download><i class="fa-solid fa-download"></i>Download CV</a>
+</aside>
+<main id="main">
+<section class="hero" id="home"><div class="wrap"><div class="eyebrow"><i class="fa-solid fa-shield-halved"></i>Quality engineering leadership</div><h2>Leading quality engineering<br><span class="gradient">for global software products.</span></h2><p>Senior Quality Engineering Leader, QA Manager and Test Automation Architect with 23+ years of professional experience, including 14+ years in software quality. Specialized in test strategy, scalable automation, CI/CD quality gates, API and Kafka testing, enterprise integrations, performance engineering and AI-assisted quality.</p><div class="actions"><a class="btn btn-primary" href="#projects"><i class="fa-solid fa-diagram-project"></i>View projects</a><a class="btn btn-secondary" href="#contact"><i class="fa-solid fa-paper-plane"></i>Contact me</a></div><div class="grid kpis"><div class="card kpi"><strong>23+</strong><span>Years in Quality Engineering</span></div><div class="card kpi"><strong>14+</strong><span>Years in software quality and IT</span></div><div class="card kpi"><strong>52</strong><span>Test Automation University certifications</span></div><div class="card kpi"><strong>18</strong><span>Global go-lives in regulated programs</span></div></div></div></section>
+<section id="about"><div class="wrap"><div class="heading"><span>Profile</span><h2>About me</h2></div><div class="grid about"><article class="card"><p>I combine hands-on test automation with QA leadership, test strategy, quality governance, mentoring and continuous improvement. My background covers web, mobile, REST APIs, microservices, Kafka-based systems, SAP integrations, performance testing and complex hardware-software environments across Europe and LATAM.</p></article><article class="card"><ul class="focus"><li><i class="fa-solid fa-circle-check"></i>Automation architecture and framework design</li><li><i class="fa-solid fa-circle-check"></i>Risk-based strategy and quality governance</li><li><i class="fa-solid fa-circle-check"></i>QA mentoring and stakeholder enablement</li><li><i class="fa-solid fa-circle-check"></i>AI-assisted quality engineering and QAOps</li></ul></article></div></div></section>
+<section id="experience"><div class="wrap"><div class="heading"><span>Professional journey</span><h2>Selected experience</h2></div><div class="timeline"><article class="timeline-item"><h3><span class="company">Swiss Post</span> | Senior Test Engineer / QA Manager</h3><small class="period">Apr 2023 - Present</small><p>QA strategy, risk-based testing, mentoring and automated regression and integration testing for customs clearance, logistics, SAP, APIs, microservices and Kafka. Automation integrated with Jenkins and GitHub Actions.</p></article><article class="timeline-item"><h3><span class="company">Aubay, Volkswagen Group</span> | Senior Test Engineer / QA Mentor</h3><small class="period">Mar 2022 - Apr 2023</small><p>Quality engineering for automotive e-commerce, ERP, microservices and logistics with Cypress, Cucumber, JavaScript, Node.js and Postman.</p></article><article class="timeline-item"><h3><span class="company">TCS, Citibank</span> | Senior Test Engineer / Test Lead</h3><small class="period">2021</small><p>Quality leadership for banking and payment platforms, including frontend/API automation, performance testing, traceability and defect reviews.</p></article><article class="timeline-item"><h3><span class="company">Infosys, Johnson &amp; Johnson</span> | SQA Engineer / Agile Coach / SME</h3><small class="period">2019 - 2021</small><p>Planning, GxP validation, coaching, metrics and quality reporting for global healthcare and enterprise solutions across 18 go-lives.</p></article></div></div></section>
+<section id="skills"><div class="wrap"><div class="heading"><span>Technology matrix</span><h2>Technical expertise</h2><p>Technology badges reflect the QA, automation, API and CI/CD subjects represented across my GitHub portfolio.</p></div><div class="grid skills"><article class="card"><h3><i class="fa-solid fa-robot"></i> Test automation</h3><div class="tags"><span class="tag">Robot Framework</span><span class="tag">Playwright</span><span class="tag">Selenium</span><span class="tag">Cypress</span><span class="tag">Appium</span><span class="tag">Applitools Eyes</span></div></article><article class="card"><h3><i class="fa-solid fa-network-wired"></i> API, integration and events</h3><div class="tags"><span class="tag">REST API</span><span class="tag">Postman</span><span class="tag">Newman</span><span class="tag">Swagger</span><span class="tag">Kafka</span><span class="tag">SAP</span></div></article><article class="card"><h3><i class="fa-solid fa-code-branch"></i> DevOps and QAOps</h3><div class="tags"><span class="tag">GitHub Actions</span><span class="tag">Jenkins</span><span class="tag">Azure DevOps</span><span class="tag">Docker</span><span class="tag">Quality Gates</span></div></article></div>
+<div class="card tech-panel"><h3><i class="fa-brands fa-github"></i> GitHub technology badges</h3><p>Direct links to the GitHub profile and representative public repositories.</p><div class="tech-badges">
+<a class="tech-badge" href="https://github.com/carloseduardo1984" target="_blank" rel="noopener noreferrer"><i class="devicon-github-original"></i>GitHub Portfolio</a>
+<a class="tech-badge" href="https://github.com/carloseduardo1984?tab=repositories&q=cypress" target="_blank" rel="noopener noreferrer"><i class="devicon-cypressio-plain"></i>Cypress</a>
+<a class="tech-badge" href="https://github.com/carloseduardo1984?tab=repositories&q=javascript" target="_blank" rel="noopener noreferrer"><i class="devicon-javascript-plain colored"></i>JavaScript</a>
+<a class="tech-badge" href="https://github.com/carloseduardo1984?tab=repositories&q=node" target="_blank" rel="noopener noreferrer"><i class="devicon-nodejs-plain colored"></i>Node.js</a>
+<a class="tech-badge" href="https://github.com/carloseduardo1984?tab=repositories&q=python" target="_blank" rel="noopener noreferrer"><i class="devicon-python-plain colored"></i>Python</a>
+<a class="tech-badge" href="https://github.com/carloseduardo1984?tab=repositories&q=java" target="_blank" rel="noopener noreferrer"><i class="devicon-java-plain colored"></i>Java</a>
+<a class="tech-badge" href="https://github.com/carloseduardo1984?tab=repositories&q=selenium" target="_blank" rel="noopener noreferrer"><i class="devicon-selenium-original colored"></i>Selenium</a>
+<a class="tech-badge" href="https://github.com/carloseduardo1984?tab=repositories&q=robot" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-robot"></i>Robot Framework</a>
+<a class="tech-badge" href="https://github.com/carloseduardo1984?tab=repositories&q=playwright" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-masks-theater"></i>Playwright</a>
+<a class="tech-badge" href="https://github.com/carloseduardo1984/api_with_github_actions" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-cloud-arrow-up"></i>API Testing</a>
+<a class="tech-badge" href="https://github.com/carloseduardo1984/api_autamation_test_newman" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-paper-plane"></i>Postman / Newman</a>
+<a class="tech-badge" href="https://github.com/carloseduardo1984/DocsSwagger-NodeJS" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-file-code"></i>Swagger / OpenAPI</a>
+<a class="tech-badge" href="https://github.com/carloseduardo1984?tab=repositories&q=github+actions" target="_blank" rel="noopener noreferrer"><i class="devicon-githubactions-plain colored"></i>GitHub Actions</a>
+<a class="tech-badge" href="https://github.com/carloseduardo1984?tab=repositories&q=docker" target="_blank" rel="noopener noreferrer"><i class="devicon-docker-plain colored"></i>Docker</a>
+<a class="tech-badge" href="https://github.com/carloseduardo1984/teste-unitario-jest" target="_blank" rel="noopener noreferrer"><i class="devicon-jest-plain colored"></i>Jest</a>
+<a class="tech-badge" href="https://github.com/carloseduardo1984?tab=repositories&q=html" target="_blank" rel="noopener noreferrer"><i class="devicon-html5-plain colored"></i>HTML5</a>
+<a class="tech-badge" href="https://github.com/carloseduardo1984?tab=repositories&q=css" target="_blank" rel="noopener noreferrer"><i class="devicon-css3-plain colored"></i>CSS3</a>
+</div></div></div></section>
+<section id="projects"><div class="wrap"><div class="heading"><span>GitHub portfolio</span><h2>Featured projects</h2></div><div class="grid projects"><article class="card project"><i class="fa-solid fa-cloud-arrow-up"></i><h3>API Testing and GitHub Actions</h3><p>Repeatable API checks integrated into continuous integration.</p><div class="tags"><span class="tag">API</span><span class="tag">GitHub Actions</span></div><a href="https://github.com/carloseduardo1984/api_with_github_actions" target="_blank" rel="noopener noreferrer">Open project <i class="fa-solid fa-arrow-up-right-from-square"></i></a></article><article class="card project"><i class="devicon-cypressio-plain"></i><h3>Cypress Cucumber</h3><p>Cypress v12 automation with BDD and HTML reporting.</p><div class="tags"><span class="tag">Cypress</span><span class="tag">Cucumber</span><span class="tag">BDD</span></div><a href="https://github.com/carloseduardo1984/cypress_cucumber_v12.10" target="_blank" rel="noopener noreferrer">Open project <i class="fa-solid fa-arrow-up-right-from-square"></i></a></article><article class="card project"><i class="fa-solid fa-file-code"></i><h3>Swagger Documentation with Node.js</h3><p>API documentation examples using Swagger and Node.js.</p><div class="tags"><span class="tag">Swagger</span><span class="tag">OpenAPI</span><span class="tag">Node.js</span></div><a href="https://github.com/carloseduardo1984/DocsSwagger-NodeJS" target="_blank" rel="noopener noreferrer">Open project <i class="fa-solid fa-arrow-up-right-from-square"></i></a></article></div></div></section>
+<section id="credentials"><div class="wrap"><div class="heading"><span>Education and credentials</span><h2>Qualifications and certification badges</h2></div><div class="grid education"><article class="card"><small>MBA</small><h3>Strategic Management and Innovation</h3><p>Business strategy, leadership, innovation and decision-making.</p></article><article class="card"><small>Postgraduate degree</small><h3>Electronic Systems and Automation Engineering</h3><p>Industrial automation, electronics, instrumentation and control.</p></article><article class="card"><small>Bachelor's degree</small><h3>Industrial Automation</h3><p>Automation technology, electronics, software and control systems.</p></article><article class="card"><small>Professional learning</small><h3>52 Test Automation University Certifications</h3><p>Automation, Quality Engineering, APIs, CI/CD, performance and AI-assisted testing.</p></article></div>
+<div class="grid cert-badges">
+<article class="card badge-card"><div class="badge-icon"><i class="fa-solid fa-vial-circle-check"></i></div><span class="badge-level">Foundation</span><h3>ISTQB CTFL</h3><p>Certified Tester Foundation Level covering testing principles, techniques, lifecycle activities and quality practices.</p></article>
+<article class="card badge-card"><div class="badge-icon"><i class="fa-solid fa-people-group"></i></div><span class="badge-level">Extension</span><h3>ISTQB Agile Tester</h3><p>Agile Tester Extension focused on collaboration, continuous feedback, iterative delivery and Agile testing practices.</p></article>
+<article class="card badge-card"><div class="badge-icon"><i class="fa-solid fa-chess-king"></i></div><span class="badge-level">Advanced v3.0</span><h3>ISTQB CTAL-TM v3.0</h3><p>Advanced Test Management focused on strategy, planning, monitoring, risk, metrics, teams and stakeholder management.</p></article>
+<article class="card badge-card"><div class="badge-icon"><i class="fa-solid fa-arrows-spin"></i></div><span class="badge-level">Agile Leadership</span><h3>Scrum Master</h3><p>Scrum facilitation, servant leadership, team coaching, impediment removal and continuous improvement.</p></article>
+</div></div></section>
+<section id="languages"><div class="wrap"><div class="heading"><span>Communication</span><h2>Languages</h2></div><div class="card"><div class="language"><strong>Português</strong><div class="track"><div class="level" style="width:100%"></div></div><span>Native</span></div><div class="language"><strong>English</strong><div class="track"><div class="level" style="width:90%"></div></div><span>C1/C2</span></div><div class="language"><strong>Español</strong><div class="track"><div class="level" style="width:68%"></div></div><span>B1/B2</span></div><div class="language"><strong>Deutsch</strong><div class="track"><div class="level" style="width:35%"></div></div><span>A2</span></div></div></div></section>
+<section id="contact"><div class="wrap"><div class="grid contact"><div><div class="eyebrow">Let's connect</div><h2>Building scalable quality engineering in Valencia</h2><p>I am targeting opportunities as a QA Manager, Quality Engineering Lead, Test Strategy Manager, Automation Architect or Senior Quality Consultant.</p></div><div class="contact-links"><a href="mailto:carloseduardo1984@gmail.com"><i class="fa-solid fa-envelope"></i>carloseduardo1984@gmail.com</a><a href="https://www.linkedin.com/in/carlosoliveira1984/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin"></i>LinkedIn</a><a href="https://github.com/carloseduardo1984" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i>GitHub</a><div><i class="fa-solid fa-location-dot"></i>Valencia, Spain</div></div></div></div></section>
+</main>
+<footer>© <span id="year"></span> Carlos Oliveira. Multilingual Quality Engineering portfolio.</footer>
+<script>
+const sidebar=document.getElementById('sidebar'),overlay=document.getElementById('overlay'),menu=document.getElementById('menuButton');
+function toggle(open=!sidebar.classList.contains('open')){sidebar.classList.toggle('open',open);overlay.classList.toggle('show',open);document.body.classList.toggle('menu-open',open);menu.setAttribute('aria-expanded',String(open));menu.innerHTML=open?'<i class="fa-solid fa-xmark"></i>':'<i class="fa-solid fa-bars"></i>'}
+menu.onclick=()=>toggle();overlay.onclick=()=>toggle(false);document.querySelectorAll('nav a').forEach(a=>a.onclick=()=>{if(innerWidth<=860)toggle(false)});
+const links=[...document.querySelectorAll('nav a')];const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting)links.forEach(a=>a.classList.toggle('active',a.getAttribute('href')==='#'+entry.target.id))}),{rootMargin:'-35% 0px -55%'});document.querySelectorAll('main section[id]').forEach(section=>observer.observe(section));document.getElementById('year').textContent=new Date().getFullYear();
+</script>
 </body>
 </html>
